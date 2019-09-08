@@ -9,23 +9,53 @@
 /* Begin PBXBuildFile section */
 		A117B9EC23255F1700D285FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A117B9EB23255F1700D285FB /* AppDelegate.m */; };
 		A117B9EF23255F1700D285FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A117B9EE23255F1700D285FB /* ViewController.m */; };
-		A117B9F223255F1700D285FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A117B9F023255F1700D285FB /* Main.storyboard */; };
 		A117B9F423255F1900D285FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A117B9F323255F1900D285FB /* Assets.xcassets */; };
 		A117B9F723255F1900D285FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A117B9F523255F1900D285FB /* LaunchScreen.storyboard */; };
 		A117B9FA23255F1900D285FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A117B9F923255F1900D285FB /* main.m */; };
+		A117BA3E2325778D00D285FB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A117BA3D2325778D00D285FB /* Podfile */; };
+		A117BA6F232577F300D285FB /* UIViewController+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A117BA5D232577F200D285FB /* UIViewController+KMNavigationBarTransition.m */; };
+		A117BA70232577F300D285FB /* UIScrollView+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A117BA5F232577F200D285FB /* UIScrollView+KMNavigationBarTransition.m */; };
+		A117BA71232577F300D285FB /* KMWeakObjectContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = A117BA64232577F200D285FB /* KMWeakObjectContainer.m */; };
+		A117BA72232577F300D285FB /* UINavigationBar+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A117BA65232577F200D285FB /* UINavigationBar+KMNavigationBarTransition.m */; };
+		A117BA73232577F300D285FB /* UINavigationController+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A117BA69232577F200D285FB /* UINavigationController+KMNavigationBarTransition.m */; };
+		A117BA74232577F300D285FB /* KMSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = A117BA6A232577F200D285FB /* KMSwizzle.m */; };
+		A117BA75232577F300D285FB /* NSObject+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A117BA6C232577F300D285FB /* NSObject+KMNavigationBarTransition.m */; };
+		ACD60D370E0ED04E96FF988E /* Pods_SDaccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05746542E962966322BCB26 /* Pods_SDaccount.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B89C74C3ADA1440718224A9 /* Pods-SDaccount.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDaccount.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDaccount/Pods-SDaccount.release.xcconfig"; sourceTree = "<group>"; };
+		2D8E38C7F8D245C4B0C5FEBA /* Pods-SDaccount.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDaccount.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDaccount/Pods-SDaccount.debug.xcconfig"; sourceTree = "<group>"; };
 		A117B9E723255F1700D285FB /* SDaccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDaccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A117B9EA23255F1700D285FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A117B9EB23255F1700D285FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A117B9ED23255F1700D285FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A117B9EE23255F1700D285FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A117B9F123255F1700D285FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A117B9F323255F1900D285FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A117B9F623255F1900D285FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A117B9F823255F1900D285FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A117B9F923255F1900D285FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A117BA3D2325778D00D285FB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		A117BA5C232577F200D285FB /* UINavigationBar+KMNavigationBarTransition_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KMNavigationBarTransition_internal.h"; sourceTree = "<group>"; };
+		A117BA5D232577F200D285FB /* UIViewController+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
+		A117BA5E232577F200D285FB /* UINavigationController+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
+		A117BA5F232577F200D285FB /* UIScrollView+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
+		A117BA60232577F200D285FB /* KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMNavigationBarTransition.h; sourceTree = "<group>"; };
+		A117BA61232577F200D285FB /* UIScrollView+KMNavigationBarTransition_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+KMNavigationBarTransition_internal.h"; sourceTree = "<group>"; };
+		A117BA62232577F200D285FB /* NSObject+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
+		A117BA63232577F200D285FB /* KMSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSwizzle.h; sourceTree = "<group>"; };
+		A117BA64232577F200D285FB /* KMWeakObjectContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMWeakObjectContainer.m; sourceTree = "<group>"; };
+		A117BA65232577F200D285FB /* UINavigationBar+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
+		A117BA66232577F200D285FB /* UINavigationController+KMNavigationBarTransition_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+KMNavigationBarTransition_internal.h"; sourceTree = "<group>"; };
+		A117BA67232577F200D285FB /* UIViewController+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
+		A117BA68232577F200D285FB /* UIViewController+KMNavigationBarTransition_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KMNavigationBarTransition_internal.h"; sourceTree = "<group>"; };
+		A117BA69232577F200D285FB /* UINavigationController+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
+		A117BA6A232577F200D285FB /* KMSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSwizzle.m; sourceTree = "<group>"; };
+		A117BA6B232577F300D285FB /* KMWeakObjectContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMWeakObjectContainer.h; sourceTree = "<group>"; };
+		A117BA6C232577F300D285FB /* NSObject+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
+		A117BA6D232577F300D285FB /* UIScrollView+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
+		A117BA6E232577F300D285FB /* UINavigationBar+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
+		F05746542E962966322BCB26 /* Pods_SDaccount.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDaccount.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +63,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD60D370E0ED04E96FF988E /* Pods_SDaccount.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E250F8CF4E14C55C1829591 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D8E38C7F8D245C4B0C5FEBA /* Pods-SDaccount.debug.xcconfig */,
+				2B89C74C3ADA1440718224A9 /* Pods-SDaccount.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A117B9DE23255F1700D285FB = {
 			isa = PBXGroup;
 			children = (
 				A117B9E923255F1700D285FB /* SDaccount */,
 				A117B9E823255F1700D285FB /* Products */,
+				4E250F8CF4E14C55C1829591 /* Pods */,
+				CDB950EAE664A2936067FDB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +100,204 @@
 		A117B9E923255F1700D285FB /* SDaccount */ = {
 			isa = PBXGroup;
 			children = (
-				A117B9EA23255F1700D285FB /* AppDelegate.h */,
-				A117B9EB23255F1700D285FB /* AppDelegate.m */,
+				A117BA0023255F4E00D285FB /* AppDelegate */,
+				A117BA01232572FE00D285FB /* Main Tab */,
+				A117BA022325731100D285FB /* List Tab */,
+				A117BA032325731A00D285FB /* Category Tab */,
+				A117BA062325733F00D285FB /* AddItem Tab */,
+				A117BA052325733B00D285FB /* Report Tab */,
+				A117BA042325733600D285FB /* More Tab */,
 				A117B9ED23255F1700D285FB /* ViewController.h */,
+				A117BA0C2325741300D285FB /* Database */,
 				A117B9EE23255F1700D285FB /* ViewController.m */,
-				A117B9F023255F1700D285FB /* Main.storyboard */,
-				A117B9F323255F1900D285FB /* Assets.xcassets */,
-				A117B9F523255F1900D285FB /* LaunchScreen.storyboard */,
-				A117B9F823255F1900D285FB /* Info.plist */,
-				A117B9F923255F1900D285FB /* main.m */,
+				A117BA0D2325741C00D285FB /* Service */,
+				A117BA14232575DB00D285FB /* Lib */,
+				A117BA13232575CB00D285FB /* Common */,
+				A117BA0E2325742600D285FB /* Model */,
+				A117BA0F2325744C00D285FB /* Resource */,
+				A117BA102325747B00D285FB /* Supporting Files */,
 			);
 			path = SDaccount;
+			sourceTree = "<group>";
+		};
+		A117BA0023255F4E00D285FB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A117B9EA23255F1700D285FB /* AppDelegate.h */,
+				A117B9EB23255F1700D285FB /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A117BA01232572FE00D285FB /* Main Tab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Main Tab";
+			sourceTree = "<group>";
+		};
+		A117BA022325731100D285FB /* List Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A117BA0B232573F600D285FB /* View */,
+			);
+			path = "List Tab";
+			sourceTree = "<group>";
+		};
+		A117BA032325731A00D285FB /* Category Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A117BA0A232573DB00D285FB /* View */,
+			);
+			path = "Category Tab";
+			sourceTree = "<group>";
+		};
+		A117BA042325733600D285FB /* More Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A117BA07232573C900D285FB /* View */,
+			);
+			path = "More Tab";
+			sourceTree = "<group>";
+		};
+		A117BA052325733B00D285FB /* Report Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A117BA08232573D400D285FB /* View */,
+			);
+			name = "Report Tab";
+			sourceTree = "<group>";
+		};
+		A117BA062325733F00D285FB /* AddItem Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A117BA09232573D800D285FB /* View */,
+			);
+			path = "AddItem Tab";
+			sourceTree = "<group>";
+		};
+		A117BA07232573C900D285FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A117BA08232573D400D285FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A117BA09232573D800D285FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A117BA0A232573DB00D285FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A117BA0B232573F600D285FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A117BA0C2325741300D285FB /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		A117BA0D2325741C00D285FB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A117BA0E2325742600D285FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A117BA0F2325744C00D285FB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A117B9F323255F1900D285FB /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A117BA102325747B00D285FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A117B9F523255F1900D285FB /* LaunchScreen.storyboard */,
+				A117B9F823255F1900D285FB /* Info.plist */,
+				A117BA3D2325778D00D285FB /* Podfile */,
+				A117B9F923255F1900D285FB /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A117BA13232575CB00D285FB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A117BA14232575DB00D285FB /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A117BA5B232577F200D285FB /* KMNavigationBarTransition */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		A117BA5B232577F200D285FB /* KMNavigationBarTransition */ = {
+			isa = PBXGroup;
+			children = (
+				A117BA5C232577F200D285FB /* UINavigationBar+KMNavigationBarTransition_internal.h */,
+				A117BA5D232577F200D285FB /* UIViewController+KMNavigationBarTransition.m */,
+				A117BA5E232577F200D285FB /* UINavigationController+KMNavigationBarTransition.h */,
+				A117BA5F232577F200D285FB /* UIScrollView+KMNavigationBarTransition.m */,
+				A117BA60232577F200D285FB /* KMNavigationBarTransition.h */,
+				A117BA61232577F200D285FB /* UIScrollView+KMNavigationBarTransition_internal.h */,
+				A117BA62232577F200D285FB /* NSObject+KMNavigationBarTransition.h */,
+				A117BA63232577F200D285FB /* KMSwizzle.h */,
+				A117BA64232577F200D285FB /* KMWeakObjectContainer.m */,
+				A117BA65232577F200D285FB /* UINavigationBar+KMNavigationBarTransition.m */,
+				A117BA66232577F200D285FB /* UINavigationController+KMNavigationBarTransition_internal.h */,
+				A117BA67232577F200D285FB /* UIViewController+KMNavigationBarTransition.h */,
+				A117BA68232577F200D285FB /* UIViewController+KMNavigationBarTransition_internal.h */,
+				A117BA69232577F200D285FB /* UINavigationController+KMNavigationBarTransition.m */,
+				A117BA6A232577F200D285FB /* KMSwizzle.m */,
+				A117BA6B232577F300D285FB /* KMWeakObjectContainer.h */,
+				A117BA6C232577F300D285FB /* NSObject+KMNavigationBarTransition.m */,
+				A117BA6D232577F300D285FB /* UIScrollView+KMNavigationBarTransition.h */,
+				A117BA6E232577F300D285FB /* UINavigationBar+KMNavigationBarTransition.h */,
+			);
+			path = KMNavigationBarTransition;
+			sourceTree = "<group>";
+		};
+		CDB950EAE664A2936067FDB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F05746542E962966322BCB26 /* Pods_SDaccount.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A117B9FD23255F1900D285FB /* Build configuration list for PBXNativeTarget "SDaccount" */;
 			buildPhases = (
+				FB43218FF37DBD9DBB6C4229 /* [CP] Check Pods Manifest.lock */,
 				A117B9E323255F1700D285FB /* Sources */,
 				A117B9E423255F1700D285FB /* Frameworks */,
 				A117B9E523255F1700D285FB /* Resources */,
+				779C402C96D79DB6B31CF187 /* [CP] Embed Pods Frameworks */,
+				A5946B728A61C0612D817ECC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,13 +360,106 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A117BA3E2325778D00D285FB /* Podfile in Resources */,
 				A117B9F723255F1900D285FB /* LaunchScreen.storyboard in Resources */,
 				A117B9F423255F1900D285FB /* Assets.xcassets in Resources */,
-				A117B9F223255F1700D285FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		779C402C96D79DB6B31CF187 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SDaccount/Pods-SDaccount-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
+				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/QMUIKit/QMUIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RHKeyValueStore/RHKeyValueStore.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLiteRepairKit/sqliterk.framework",
+				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
+				"${BUILT_PRODUCTS_DIR}/WCDB/WCDB.framework",
+				"${BUILT_PRODUCTS_DIR}/WCDBOptimizedSQLCipher/sqlcipher.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QMUIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RHKeyValueStore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sqliterk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sqlcipher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDaccount/Pods-SDaccount-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5946B728A61C0612D817ECC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SDaccount/Pods-SDaccount-resources.sh",
+				"${PODS_ROOT}/AlicloudFeedback/feedback/YWFeedbackBundle.bundle",
+				"${PODS_ROOT}/ShareSDK3/SDK/ShareSDK/Support/Required/ShareSDK.bundle",
+				"${PODS_ROOT}/ShareSDK3/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle",
+				"${PODS_ROOT}/ShareSDK3/SDK/ShareSDK/Support/Optional/ShareSDKUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YWFeedbackBundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDKUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDaccount/Pods-SDaccount-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB43218FF37DBD9DBB6C4229 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDaccount-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A117B9E323255F1700D285FB /* Sources */ = {
@@ -143,21 +468,20 @@
 			files = (
 				A117B9EF23255F1700D285FB /* ViewController.m in Sources */,
 				A117B9FA23255F1900D285FB /* main.m in Sources */,
+				A117BA73232577F300D285FB /* UINavigationController+KMNavigationBarTransition.m in Sources */,
 				A117B9EC23255F1700D285FB /* AppDelegate.m in Sources */,
+				A117BA72232577F300D285FB /* UINavigationBar+KMNavigationBarTransition.m in Sources */,
+				A117BA6F232577F300D285FB /* UIViewController+KMNavigationBarTransition.m in Sources */,
+				A117BA75232577F300D285FB /* NSObject+KMNavigationBarTransition.m in Sources */,
+				A117BA71232577F300D285FB /* KMWeakObjectContainer.m in Sources */,
+				A117BA74232577F300D285FB /* KMSwizzle.m in Sources */,
+				A117BA70232577F300D285FB /* UIScrollView+KMNavigationBarTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A117B9F023255F1700D285FB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A117B9F123255F1700D285FB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A117B9F523255F1900D285FB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -220,7 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -273,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,11 +607,12 @@
 		};
 		A117B9FE23255F1900D285FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D8E38C7F8D245C4B0C5FEBA /* Pods-SDaccount.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C4X35KSX5P;
-				INFOPLIST_FILE = SDaccount/Info.plist;
+				INFOPLIST_FILE = "SDaccount/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +625,12 @@
 		};
 		A117B9FF23255F1900D285FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B89C74C3ADA1440718224A9 /* Pods-SDaccount.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C4X35KSX5P;
-				INFOPLIST_FILE = SDaccount/Info.plist;
+				INFOPLIST_FILE = "SDaccount/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
