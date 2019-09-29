@@ -31,6 +31,8 @@
 		A1377149233EBCCF00263482 /* SDThemeDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = A1377148233EBCCF00263482 /* SDThemeDefault.m */; };
 		A137714C233ECCE200263482 /* SDTimeCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A137714B233ECCE200263482 /* SDTimeCenter.m */; };
 		A1377155233F6F1800263482 /* SDDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1377154233F6F1800263482 /* SDDBManager.mm */; };
+		A1377158234031CB00263482 /* SDCategoryService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1377157234031CB00263482 /* SDCategoryService.mm */; };
+		A137715B23405DC100263482 /* SDCategory.mm in Sources */ = {isa = PBXBuildFile; fileRef = A137715A23405DC100263482 /* SDCategory.mm */; };
 		A1491481233E07BF003F40F3 /* SDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1491480233E07BF003F40F3 /* SDThemeManager.m */; };
 		ACD60D370E0ED04E96FF988E /* Pods_SDaccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05746542E962966322BCB26 /* Pods_SDaccount.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,11 @@
 		A137714B233ECCE200263482 /* SDTimeCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTimeCenter.m; sourceTree = "<group>"; };
 		A1377153233F6F1800263482 /* SDDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDDBManager.h; sourceTree = "<group>"; };
 		A1377154233F6F1800263482 /* SDDBManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDDBManager.mm; sourceTree = "<group>"; };
+		A1377156234031CB00263482 /* SDCategoryService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDCategoryService.h; sourceTree = "<group>"; };
+		A1377157234031CB00263482 /* SDCategoryService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDCategoryService.mm; sourceTree = "<group>"; };
+		A137715923405DC100263482 /* SDCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDCategory.h; sourceTree = "<group>"; };
+		A137715A23405DC100263482 /* SDCategory.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDCategory.mm; sourceTree = "<group>"; };
+		A137716323406C3700263482 /* SDCategory+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDCategory+WCTTableCoding.h"; sourceTree = "<group>"; };
 		A149147D233E04EE003F40F3 /* SDThemeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDThemeProtocol.h; sourceTree = "<group>"; };
 		A149147F233E07BF003F40F3 /* SDThemeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDThemeManager.h; sourceTree = "<group>"; };
 		A1491480233E07BF003F40F3 /* SDThemeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDThemeManager.m; sourceTree = "<group>"; };
@@ -262,6 +269,8 @@
 		A117BA0D2325741C00D285FB /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				A1377156234031CB00263482 /* SDCategoryService.h */,
+				A1377157234031CB00263482 /* SDCategoryService.mm */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -269,6 +278,9 @@
 		A117BA0E2325742600D285FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A137715923405DC100263482 /* SDCategory.h */,
+				A137715A23405DC100263482 /* SDCategory.mm */,
+				A137716323406C3700263482 /* SDCategory+WCTTableCoding.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -586,7 +598,9 @@
 				A117BA74232577F300D285FB /* KMSwizzle.m in Sources */,
 				A1377155233F6F1800263482 /* SDDBManager.mm in Sources */,
 				A1377140233EB75600263482 /* SDThemeBlue.m in Sources */,
+				A137715B23405DC100263482 /* SDCategory.mm in Sources */,
 				A117BA70232577F300D285FB /* UIScrollView+KMNavigationBarTransition.m in Sources */,
+				A1377158234031CB00263482 /* SDCategoryService.mm in Sources */,
 				A11060E623275650003F500D /* SDNaviController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

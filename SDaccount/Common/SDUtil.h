@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SDUtil : NSObject
 
 + (NSNumberFormatter *)numberFormatter;
-+ (NSString *)formattedNumberString:(id)numberValue;
++ (nullable NSString *)formattedNumberString:(id)numberValue;
 
 + (UIImage *)themeImageMake:(NSString *)imageName;
 

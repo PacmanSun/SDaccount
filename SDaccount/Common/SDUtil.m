@@ -21,7 +21,7 @@
     return formatter;
 }
 
-+ (NSString *)formattedNumberString:(id)numberValue {
++ (nullable NSString *)formattedNumberString:(id)numberValue {
     if ([numberValue isKindOfClass:[NSNumber class]]) {
         return [[self numberFormatter]stringFromNumber:numberValue];
     } else if ([numberValue isKindOfClass:[NSString class]]) {
