@@ -24,6 +24,9 @@
 		A117BA7D23267A2900D285FB /* SDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A117BA7C23267A2900D285FB /* SDBaseViewController.m */; };
 		A117BA862326A57900D285FB /* QMUIConfigurationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = A117BA852326A57900D285FB /* QMUIConfigurationTemplate.m */; };
 		A117BA8B2326A7C700D285FB /* SDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A117BA8A2326A7C700D285FB /* SDUtil.m */; };
+		A1191AE123470E5C007542C2 /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1191AE023470E5C007542C2 /* Categories.plist */; };
+		A1191AE4234716A7007542C2 /* SDLocation.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1191AE3234716A7007542C2 /* SDLocation.mm */; };
+		A1191AEA23472002007542C2 /* SDItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1191AE923472002007542C2 /* SDItem.mm */; };
 		A137713D233EB61600263482 /* SDThemeGreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A137713C233EB61600263482 /* SDThemeGreen.m */; };
 		A1377140233EB75600263482 /* SDThemeBlue.m in Sources */ = {isa = PBXBuildFile; fileRef = A137713F233EB75600263482 /* SDThemeBlue.m */; };
 		A1377143233EB76300263482 /* SDThemeRed.m in Sources */ = {isa = PBXBuildFile; fileRef = A1377142233EB76300263482 /* SDThemeRed.m */; };
@@ -34,6 +37,8 @@
 		A1377158234031CB00263482 /* SDCategoryService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1377157234031CB00263482 /* SDCategoryService.mm */; };
 		A137715B23405DC100263482 /* SDCategory.mm in Sources */ = {isa = PBXBuildFile; fileRef = A137715A23405DC100263482 /* SDCategory.mm */; };
 		A1491481233E07BF003F40F3 /* SDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1491480233E07BF003F40F3 /* SDThemeManager.m */; };
+		A14A746A23472F0A00DF2795 /* SDLocationService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A14A746923472F0A00DF2795 /* SDLocationService.mm */; };
+		A14A746D23472F2A00DF2795 /* SDItemService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A14A746C23472F2A00DF2795 /* SDItemService.mm */; };
 		ACD60D370E0ED04E96FF988E /* Pods_SDaccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05746542E962966322BCB26 /* Pods_SDaccount.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +85,12 @@
 		A117BA882326A77000D285FB /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		A117BA892326A7C700D285FB /* SDUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDUtil.h; sourceTree = "<group>"; };
 		A117BA8A2326A7C700D285FB /* SDUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDUtil.m; sourceTree = "<group>"; };
+		A1191AE023470E5C007542C2 /* Categories.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
+		A1191AE2234716A7007542C2 /* SDLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLocation.h; sourceTree = "<group>"; };
+		A1191AE3234716A7007542C2 /* SDLocation.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDLocation.mm; sourceTree = "<group>"; };
+		A1191AE523471F38007542C2 /* SDLocation+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDLocation+WCTTableCoding.h"; sourceTree = "<group>"; };
+		A1191AE823472002007542C2 /* SDItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDItem.h; sourceTree = "<group>"; };
+		A1191AE923472002007542C2 /* SDItem.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDItem.mm; sourceTree = "<group>"; };
 		A137713B233EB61600263482 /* SDThemeGreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDThemeGreen.h; sourceTree = "<group>"; };
 		A137713C233EB61600263482 /* SDThemeGreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDThemeGreen.m; sourceTree = "<group>"; };
 		A137713E233EB75600263482 /* SDThemeBlue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDThemeBlue.h; sourceTree = "<group>"; };
@@ -102,6 +113,11 @@
 		A149147D233E04EE003F40F3 /* SDThemeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDThemeProtocol.h; sourceTree = "<group>"; };
 		A149147F233E07BF003F40F3 /* SDThemeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDThemeManager.h; sourceTree = "<group>"; };
 		A1491480233E07BF003F40F3 /* SDThemeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDThemeManager.m; sourceTree = "<group>"; };
+		A14A74652347267600DF2795 /* SDItem+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDItem+WCTTableCoding.h"; sourceTree = "<group>"; };
+		A14A746823472F0A00DF2795 /* SDLocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLocationService.h; sourceTree = "<group>"; };
+		A14A746923472F0A00DF2795 /* SDLocationService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDLocationService.mm; sourceTree = "<group>"; };
+		A14A746B23472F2A00DF2795 /* SDItemService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDItemService.h; sourceTree = "<group>"; };
+		A14A746C23472F2A00DF2795 /* SDItemService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDItemService.mm; sourceTree = "<group>"; };
 		F05746542E962966322BCB26 /* Pods_SDaccount.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDaccount.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -271,6 +287,10 @@
 			children = (
 				A1377156234031CB00263482 /* SDCategoryService.h */,
 				A1377157234031CB00263482 /* SDCategoryService.mm */,
+				A14A746823472F0A00DF2795 /* SDLocationService.h */,
+				A14A746923472F0A00DF2795 /* SDLocationService.mm */,
+				A14A746B23472F2A00DF2795 /* SDItemService.h */,
+				A14A746C23472F2A00DF2795 /* SDItemService.mm */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -281,6 +301,12 @@
 				A137715923405DC100263482 /* SDCategory.h */,
 				A137715A23405DC100263482 /* SDCategory.mm */,
 				A137716323406C3700263482 /* SDCategory+WCTTableCoding.h */,
+				A1191AE2234716A7007542C2 /* SDLocation.h */,
+				A1191AE3234716A7007542C2 /* SDLocation.mm */,
+				A1191AE523471F38007542C2 /* SDLocation+WCTTableCoding.h */,
+				A1191AE823472002007542C2 /* SDItem.h */,
+				A1191AE923472002007542C2 /* SDItem.mm */,
+				A14A74652347267600DF2795 /* SDItem+WCTTableCoding.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				A117B9F323255F1900D285FB /* Assets.xcassets */,
+				A1191AE023470E5C007542C2 /* Categories.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -472,6 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1191AE123470E5C007542C2 /* Categories.plist in Resources */,
 				A117BA3E2325778D00D285FB /* Podfile in Resources */,
 				A117B9F723255F1900D285FB /* LaunchScreen.storyboard in Resources */,
 				A117B9F423255F1900D285FB /* Assets.xcassets in Resources */,
@@ -578,8 +606,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1191AE4234716A7007542C2 /* SDLocation.mm in Sources */,
 				A117B9FA23255F1900D285FB /* main.m in Sources */,
 				A117BA73232577F300D285FB /* UINavigationController+KMNavigationBarTransition.m in Sources */,
+				A14A746A23472F0A00DF2795 /* SDLocationService.mm in Sources */,
 				A11060E9232759BF003F500D /* SDWebViewController.m in Sources */,
 				A117B9EC23255F1700D285FB /* AppDelegate.m in Sources */,
 				A1377146233EB77600263482 /* SDThemePurple.m in Sources */,
@@ -600,6 +630,8 @@
 				A1377140233EB75600263482 /* SDThemeBlue.m in Sources */,
 				A137715B23405DC100263482 /* SDCategory.mm in Sources */,
 				A117BA70232577F300D285FB /* UIScrollView+KMNavigationBarTransition.m in Sources */,
+				A1191AEA23472002007542C2 /* SDItem.mm in Sources */,
+				A14A746D23472F2A00DF2795 /* SDItemService.mm in Sources */,
 				A1377158234031CB00263482 /* SDCategoryService.mm in Sources */,
 				A11060E623275650003F500D /* SDNaviController.m in Sources */,
 			);
