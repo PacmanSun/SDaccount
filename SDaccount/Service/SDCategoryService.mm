@@ -121,7 +121,7 @@ static NSString *const keyCategoryVersion = @"category_version";
 }
 
 - (BOOL)isBetaVersion:(NSString *)version {
-    float v = [version floatValue];
+    float v = version.floatValue;
     return v < 1.0;
 }
 

@@ -68,12 +68,64 @@ static NSString *const keyLocationVersion = @"location_version";
 
     [self.list addObject:newLocation];
     NSString *key = [[NSString alloc]initWithFormat:@"%@", newLocation.name];
-    self.map[@"key"] = newLocation;
+    self.map[key] = newLocation;
 }
 
-//- (NSArray<SDLocation *> *)fetchCustomLocation;
+- (NSArray<SDLocation *> *)fetchCustomLocation {
+    NSArray *res;
+    res = [self.db getObjectsOfClass:SDLocation.class fromTable:self.tableName where:SDLocation.builtin == NO];
+    return res;
+}
 
 #pragma mark -
 #pragma mark private method
+
+- (void)insertAllWithPlistDict:(NSDictionary *)dict {
+    NSArray *list = dict[@"list"];
+    [list enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL *_Nonnull stop) {
+        SDLocation *location = [SDLocation yy_modelWithDictionary:dict];
+        location.isAutoIncrement = YES;
+        if (location) {
+            [self.list addObject:location];
+        }
+    }];
+    [self.db insertObjects:self.list into:self.tableName];
+}
+
+- (void)setupCategories {
+    BOOL haveCache = [[self.db getOneValueOnResult:SDLocation.locationID.count() fromTable:self.tableName]unsignedIntegerValue] > 0;
+    NSString *plistFile = [[NSBundle mainBundle]pathForResource:@"Locations" ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc ]initWithContentsOfFile:plistFile];
+    NSString *version = dict[@"version"];
+    NSString *orderVersion = [KeyValueStore stringForKey:keyLocationVersion];
+
+    if (!haveCache) {
+        [self insertAllWithPlistDict:dict];
+        DDLogInfo(@"[Location service]: insert location data");
+    } else if (!SDIsEqualString(version, orderVersion)) {
+        DDLogInfo(@"[Location service]: update location data");
+        if ([self isBetaVersion:orderVersion]) {
+            [self.db deleteAllObjectsFromTable:self.tableName];
+            [self insertAllWithPlistDict:dict];
+        }
+    } else {
+        WCTSelect *select = [self.db prepareSelectObjectsOfClass:SDLocation.class fromTable:self.tableName];
+        NSArray *res = select.allObjects;
+        [self.list addObjectsFromArray:res];
+        DDLogInfo(@"[Location service]: load location data from cache");
+    }
+
+    [KeyValueStore setString:version forKey:keyLocationVersion];
+
+    [self.list enumerateObjectsUsingBlock:^(SDLocation *location, NSUInteger idx, BOOL *_Nonnull stop) {
+        NSString *key = [NSString stringWithFormat:@"_%@", location.name];
+        self.map[key] = location;
+    }];
+}
+
+- (BOOL)isBetaVersion:(NSString *)version {
+    float v = version.floatValue;
+    return v < 1.0;
+}
 
 @end
