@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SDLocationService : NSObject
 
+@property (nonatomic, strong, readonly) NSArray<SDLocation *> *locationList;
+
 + (instancetype)service;
 
 - (SDLocation *)queryLocationWithName:(NSString *)locationName;

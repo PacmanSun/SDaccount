@@ -40,7 +40,7 @@ static NSString *const keyLocationVersion = @"location_version";
 {
     self = [super init];
     if (self) {
-        _list = [[NSMutableArray alloc]initWithCapacity:15];
+        _list = [[NSMutableArray alloc]initWithCapacity:50];
         _map = [[NSMutableDictionary alloc]initWithCapacity:50];
 
         _db = DBManager.database;
@@ -126,6 +126,20 @@ static NSString *const keyLocationVersion = @"location_version";
 - (BOOL)isBetaVersion:(NSString *)version {
     float v = version.floatValue;
     return v < 1.0;
+}
+
+#pragma mark -
+#pragma mark private property
+
+- (NSString *)tableName {
+    return @"location";
+}
+
+#pragma mark -
+#pragma mark property
+
+- (NSArray<SDLocation *> *)locationList {
+    return self.list.copy;
 }
 
 @end

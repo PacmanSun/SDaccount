@@ -6,10 +6,9 @@
 //  Copyright © 2019 PacmanSun. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
-
 
 #import "SDItem.h"
+#import <WCDB/WCDB.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

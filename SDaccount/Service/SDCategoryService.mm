@@ -39,7 +39,7 @@ static NSString *const keyCategoryVersion = @"category_version";
 {
     self = [super init];
     if (self) {
-        _list = [NSMutableArray arrayWithCapacity:15];
+        _list = [NSMutableArray arrayWithCapacity:50];
         _map = [NSMutableDictionary dictionaryWithCapacity:50];
 
         _db = DBManager.database;
@@ -123,6 +123,20 @@ static NSString *const keyCategoryVersion = @"category_version";
 - (BOOL)isBetaVersion:(NSString *)version {
     float v = version.floatValue;
     return v < 1.0;
+}
+
+#pragma mark -
+#pragma mark private property
+
+- (NSString *)tableName {
+    return @"category";
+}
+
+#pragma mark -
+#pragma mark property
+
+- (NSArray<SDCategory *> *)categoryList {
+    return self.list.copy;
 }
 
 @end

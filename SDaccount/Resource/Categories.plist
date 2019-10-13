@@ -17,7 +17,7 @@
 			<key>index</key>
 			<integer>0</integer>
 			<key>color</key>
-			<string></string>
+			<string>#a5d6a7</string>
 		</dict>
 		<key>item 1</key>
 		<dict>
@@ -30,9 +30,9 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>color</key>
-			<string></string>
+			<string>#c5e1a5</string>
 		</dict>
 		<key>item 2</key>
 		<dict>
@@ -45,9 +45,9 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>color</key>
-			<string></string>
+			<string>#e6ee9c</string>
 		</dict>
 		<key>item 3</key>
 		<dict>
@@ -60,9 +60,9 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>3</integer>
 			<key>color</key>
-			<string></string>
+			<string>#fff59d</string>
 		</dict>
 		<key>item 4</key>
 		<dict>
@@ -75,9 +75,9 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>4</integer>
 			<key>color</key>
-			<string></string>
+			<string>#ffe082</string>
 		</dict>
 		<key>item 5</key>
 		<dict>
@@ -90,9 +90,9 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>5</integer>
 			<key>color</key>
-			<string></string>
+			<string>#ffcc80</string>
 		</dict>
 		<key>item 6</key>
 		<dict>
@@ -105,9 +105,9 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>6</integer>
 			<key>color</key>
-			<string></string>
+			<string>#ffab91</string>
 		</dict>
 		<key>item 7</key>
 		<dict>
@@ -120,9 +120,9 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>7</integer>
 			<key>color</key>
-			<string></string>
+			<string>#bcaaa4</string>
 		</dict>
 		<key>item 8</key>
 		<dict>
@@ -135,9 +135,9 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>8</integer>
 			<key>color</key>
-			<string></string>
+			<string>#b0bec5</string>
 		</dict>
 		<key>item 9</key>
 		<dict>
@@ -150,7 +150,7 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>9</integer>
 			<key>color</key>
 			<string></string>
 		</dict>
@@ -165,7 +165,7 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>10</integer>
 			<key>color</key>
 			<string></string>
 		</dict>
@@ -180,7 +180,7 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>0</integer>
+			<integer>11</integer>
 			<key>color</key>
 			<string></string>
 		</dict>

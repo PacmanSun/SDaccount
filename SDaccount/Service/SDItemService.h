@@ -7,10 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SDItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SDItemService : NSObject
+
+@property (nonatomic, strong, readonly) NSArray<SDItem *> *itemList;
+
++ (instancetype)service;
+
+- (SDItem *)queryItemWithName:(NSString *)itemName;
+- (void)addItemWithName:(NSString *)itemName;
+- (NSArray<SDItem *> *)fetchItems;
 
 @end
 
