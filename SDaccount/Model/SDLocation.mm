@@ -9,11 +9,7 @@
 #import "SDLocation.h"
 #import <WCDB/WCDB.h>
 
-@interface SDLocation () <WCTTableCoding>
-
-+ (NSDictionary *)modelCustomPropertyMapper;
-- (BOOL)modelCustomTransformFromDict:(NSDictionary *)dict;
-- (BOOL)modelCustomTransformToDict:(NSMutableDictionary *)dict;
+@interface SDLocation () <WCTTableCoding,YYModel>
 
 @end
 
@@ -30,22 +26,24 @@ WCDB_SYNTHESIZE(SDLocation, color)
 
 WCDB_PRIMARY_AUTO_INCREMENT(SDLocation, locationID)
 
+#pragma mark -
+#pragma mark YYModel
+
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{ @"sortIndex": @"index" };
 }
 
-- (BOOL)modelCustomTransformFromDict:(NSDictionary *)dict {
-    NSNumber *indexNum = dict[@"index"];
-    if (![indexNum isKindOfClass:[NSNumber class]]) {
-        return NO;
-    }
-    self.sortIndex = [indexNum integerValue];
-    return YES;
-}
-
-- (BOOL)modelCustomTransformToDict:(NSMutableDictionary *)dict {
-    dict[@"index"] = @(self.sortIndex);
-    return YES;
-}
-
+//- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
+//    NSNumber *indexNum = dic[@"index"];
+//    if (![indexNum isKindOfClass:[NSNumber class]]) {
+//        return NO;
+//    }
+//    self.sortIndex = [indexNum integerValue];
+//    return YES;
+//}
+//
+//- (BOOL)modelCustomTransformToDictionary:(NSMutableDictionary *)dic {
+//    dic[@"index"] = @(self.sortIndex);
+//    return YES;
+//}
 @end

@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSArray<id<SDThemeProtocol> > *themeList;
 @property (nonatomic, strong) id<SDThemeProtocol> currentTheme;
 
-+ (instancetype)manager;
++ (instancetype)sharedManager;
 - (void)setup;
 
 @end

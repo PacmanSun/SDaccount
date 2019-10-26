@@ -6,7 +6,7 @@
 	<dict>
 		<key>item 0</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -21,7 +21,7 @@
 		</dict>
 		<key>item 1</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -36,7 +36,7 @@
 		</dict>
 		<key>item 2</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -51,7 +51,7 @@
 		</dict>
 		<key>item 3</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -66,7 +66,7 @@
 		</dict>
 		<key>item 4</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -81,7 +81,7 @@
 		</dict>
 		<key>item 5</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -96,7 +96,7 @@
 		</dict>
 		<key>item 6</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -111,7 +111,7 @@
 		</dict>
 		<key>item 7</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -126,7 +126,7 @@
 		</dict>
 		<key>item 8</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -141,7 +141,7 @@
 		</dict>
 		<key>item 9</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -156,7 +156,7 @@
 		</dict>
 		<key>item 10</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>
@@ -171,7 +171,7 @@
 		</dict>
 		<key>item 11</key>
 		<dict>
-			<key>CategorieID</key>
+			<key>categorieID</key>
 			<integer>0</integer>
 			<key>iconName</key>
 			<string></string>

@@ -31,7 +31,7 @@
 }
 
 + (UIImage *)themeImageMake:(NSString *)imageName {
-    id<SDThemeProtocol> theme = [SDThemeManager manager].currentTheme;
+    id<SDThemeProtocol> theme = [SDThemeManager sharedManager].currentTheme;
     NSString *imgName = [NSString stringWithFormat:@"%@%@", imageName, [theme assetSuffix]];
     return UIImageMake(imgName);
 }

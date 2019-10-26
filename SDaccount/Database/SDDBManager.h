@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <WCDB/WCDB.h>
 
-#define DBManager [SDDBManager manager]
+#define DBManager [SDDBManager sharedManager]
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSString *path;
 @property (nonatomic, strong) WCTDatabase *database;
 
-+ (instancetype)manager;
++ (instancetype)sharedManager;
 
 @end
 

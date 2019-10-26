@@ -32,6 +32,10 @@ static const DDLogLevel ddLogLevel = DDLogLevelWarning;
 #endif
 
 #import "QMUIConfigurationTemplate.h"
+#import "SDBaseViewController.h"
+#import "SDNaviController.h"
+#import "SDTimeCenter.h"
 
+#import "SDAppContext.h"
 
 #endif /* PrefixHeader_pch */

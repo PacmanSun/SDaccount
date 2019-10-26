@@ -14,7 +14,7 @@
 @end
 
 @implementation SDDBManager
-+(instancetype)manager{
++(instancetype)sharedManager{
     static SDDBManager *manager;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

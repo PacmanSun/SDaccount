@@ -13,11 +13,11 @@
 #import "SDThemeManager.h"
 #import "SDUtil.h"
 
-#define SD_THEME_COLOR [SDThemeManager manager].currentTheme.themeColor
-#define SD_THEME_COLOR_LIGHTEN5 [SDThemeManager manager].currentTheme.themeColor_lighten5
-#define SD_THEME_COLOR_DARKEN2 [SDThemeManager manager].currentTheme.themeColor_darken2
-#define SD_BG_GRAY [SDThemeManager manager].currentTheme.backgroundColor
-#define SD_TEXT_COLOR_BLACK [SDThemeManager manager].currentTheme.textColor
+#define SD_THEME_COLOR [SDThemeManager sharedManager].currentTheme.themeColor
+#define SD_THEME_COLOR_LIGHTEN5 [SDThemeManager sharedManager].currentTheme.themeColor_lighten5
+#define SD_THEME_COLOR_DARKEN2 [SDThemeManager sharedManager].currentTheme.themeColor_darken2
+#define SD_BG_GRAY [SDThemeManager sharedManager].currentTheme.backgroundColor
+#define SD_TEXT_COLOR_BLACK [SDThemeManager sharedManager].currentTheme.textColor
 
 #define SD_TEXT_COLOR_BLACK_DARKEN @"#424242"
 #define SD_TEXT_COLOR_BLACK_LIGHTEN @"757575"
@@ -50,7 +50,7 @@
 #define SDApplication [UIApplication sharedApplication]
 #define SDDevice [UIDevice currentDevice]
 #define SDUserDefaults [NSUserDefaults standardUserDefaults]
-#define SDNotifiSDionCenter [NSNotificationCenter defaultCenter]
+#define SDNotificationCenter [NSNotificationCenter defaultCenter]
 #define SDKeyWindow [UIApplication sharedApplication].keyWindow
 
 #endif /* Macro_h */

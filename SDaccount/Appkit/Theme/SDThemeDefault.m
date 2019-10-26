@@ -11,7 +11,7 @@
 @implementation SDThemeDefault
 
 - (nonnull NSString *)assetSuffix {
-    return @"_default_t";
+    return @"_yellow_t";
 }
 
 - (nonnull NSString *)backgroundColor {

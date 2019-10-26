@@ -21,7 +21,7 @@
 
 @implementation SDThemeManager
 
-+ (instancetype)manager {
++ (instancetype)sharedManager {
     static SDThemeManager *manager;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
