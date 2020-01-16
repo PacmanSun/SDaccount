@@ -6,22 +6,36 @@
 //  Copyright © 2019 PacmanSun. All rights reserved.
 //
 
-#import "SDLocationService.h"
 #import "SDDBManager.h"
+#import "SDLocationService.h"
 #import "SDLocation+WCTTableCoding.h"
+#import "SDRoomService.h"
+#import "SDRoom+WCTTableCoding.h"
+#import "SDAddressService.h"
+#import "SDAddress+WCTTableCoding.h"
 
 static NSString *const keyLocationVersion = @"location_version";
+static NSString *const keyDefaultLocation = @"defaultLocation";
 
 @interface SDLocationService ()
 
 @property (nonatomic, strong) NSString *tableName;
 @property (nonatomic, strong) WCTDatabase *db;
-@property (nonatomic, strong) NSMutableArray *list;
-@property (nonatomic, strong) NSMutableDictionary *map;
+//dict的key为“roomID”string
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NSMutableArray<SDLocation *> *> *lists;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NSMutableDictionary<NSString *, SDLocation *> *> *maps;
 
-- (void)insertAllWithPlistDict:(NSDictionary *)dict;
-- (void)setupCategories;
-- (BOOL)isBetaVersion:(NSString *)version;
+- (void)insertAllWithPlistDict:(NSDictionary *)dict key:(NSString *)key roomID:(NSInteger)roomID;
+- (void)setup;
+//- (BOOL)isBetaVersion:(NSString *)version;
+
+//- (NSArray *)builtinListColors;
+//- (NSArray *)builtinListIcons;
+- (NSArray *)builtinListNames;
+- (NSArray *)builtinList;
+
+- (void)onDefaultRoomChanged:(NSNotification *)notification;
+- (void)onRoomDeleted:(NSNotification *)notification;
 
 @end
 
@@ -40,22 +54,121 @@ static NSString *const keyLocationVersion = @"location_version";
 {
     self = [super init];
     if (self) {
-        _list = [[NSMutableArray alloc]initWithCapacity:50];
-        _map = [[NSMutableDictionary alloc]initWithCapacity:50];
+        _lists = [[NSMutableDictionary alloc]initWithCapacity:SDRoomService.service.roomLists.count];
+        _maps = [[NSMutableDictionary alloc]initWithCapacity:SDRoomService.service.roomLists.count];
 
         _db = DBManager.database;
-        [_db createTableAndIndexesOfName:self.tableName withClass:[SDLocation class]];
+
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onDefaultRoomChanged:) name:SDDefaultRoomChangedNotification object:nil];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onRoomDeleted:) name:SDRoomDeletedNotification object:nil];
+        [self setup];
     }
     return self;
 }
 
-- (SDLocation *)queryLocationWithName:(NSString *)locationName {
-    NSParameterAssert(locationName);
-    NSString *key = [[NSString alloc]initWithFormat:@"%@", locationName];
-    return self.map[key];
+- (void)configDefaultLocationWithName:(NSString *)locationName roomID:(NSInteger)roomID {
+    if (locationName != self.defaultLocation.name || roomID != self.defaultLocation.roomID) {
+        NSString *key = [NSString stringWithFormat:@"%ld_%@", roomID, locationName];
+        self.defaultLocation = self.maps[SDno2Str(roomID)][locationName];
+        [KeyValueStore setValue:key forKey:keyDefaultLocation];
+        [[NSNotificationCenter defaultCenter]postNotificationName:SDDefaultLocationChangedNotification object:@(self.defaultLocation.locationID)];
+    }
 }
 
-- (void)addCustomLocationWithName:(NSString *)locationName {
+- (NSDictionary<NSString *, NSArray<NSString *> *> *)nameLists {
+    NSMutableDictionary *lists = [NSMutableDictionary dictionaryWithCapacity:self.lists.count];
+    [SDRoomService.service.roomLists enumerateKeysAndObjectsUsingBlock:^(NSString *_Nonnull key, NSArray<SDRoom *> *_Nonnull obj, BOOL *_Nonnull stop) {
+        [obj enumerateObjectsUsingBlock:^(SDRoom *_Nonnull room, NSUInteger idx, BOOL *_Nonnull stop) {
+            NSMutableArray *nameList = [NSMutableArray arrayWithCapacity:self.locationLists[SDno2Str(room.roomID)].count];
+
+            [self.locationLists[SDno2Str(room.roomID)] enumerateObjectsUsingBlock:^(SDLocation *_Nonnull location, NSUInteger idx, BOOL *_Nonnull stop) {
+                [nameList addObject:location.name];
+            }];
+
+            lists[SDno2Str(room.roomID)] = nameList.copy;
+        }];
+    }];
+
+    return lists.copy;
+}
+
+- (NSArray *)builtinListColors {
+    return @[SD_THEME_COLOR];
+}
+
+- (NSArray *)builtinListIcons {
+    return @[@"icon_location"];
+}
+
+- (SDLocation *)queryLocationWithName:(NSString *)locationName {
+    NSParameterAssert(locationName);
+    NSMutableArray< NSString *> *roomIDstrs = [[NSMutableArray alloc]initWithCapacity:self.lists.count];
+    [SDRoomService.service.roomLists enumerateKeysAndObjectsUsingBlock:^(NSString *_Nonnull key, NSArray<SDRoom *> *_Nonnull obj, BOOL *_Nonnull stop) {
+        [obj enumerateObjectsUsingBlock:^(SDRoom *_Nonnull room, NSUInteger idx, BOOL *_Nonnull stop) {
+            [roomIDstrs addObject:SDno2Str(room.roomID)];
+        }];
+    }];
+
+    NSMutableArray<SDLocation *> *res = [[NSMutableArray alloc]initWithCapacity:self.lists.count];
+    for (NSString *roomIDstr in roomIDstrs) {
+        if (self.maps[roomIDstr][locationName]) {
+            [res addObject:self.maps[roomIDstr][locationName]];
+        }
+    }
+    return res.copy;
+}
+
+- (SDLocation *)queryLocationWithName:(NSString *)locationName roomID:(NSInteger)roomID {
+    NSParameterAssert(locationName);
+    return self.maps[SDno2Str(roomID)][locationName];
+}
+
+- (BOOL)renameLocationWithName:(NSString *)locationName newName:(NSString *)newLocationName roomID:(NSInteger)roomID {
+    SDLocation *location = [self queryLocationWithName:locationName roomID:roomID];
+    NSString *roomIDstr = SDno2Str(roomID);
+
+    if (self.maps[roomIDstr][locationName] != nil && self.maps[roomIDstr][newLocationName] == nil) {
+        location.name = newLocationName;
+        self.maps[roomIDstr][newLocationName] = location;
+        [self.maps[roomIDstr] removeObjectForKey:locationName];
+        [self.db updateRowsInTable:self.tableName onProperty:SDLocation.name withObject:location where:SDLocation.name == locationName];
+
+        for (SDLocation *location in self.lists[roomIDstr]) {
+            if (location.name == locationName) {
+                location.name = newLocationName;
+                break;
+            }
+        }
+
+//        rename default
+        if (self.defaultLocation.locationID == location.locationID) {
+            NSString *key = [NSString stringWithFormat:@"%ld_%@", roomID, newLocationName];
+            [KeyValueStore setValue:key forKey:keyDefaultLocation];
+        }
+
+        [[NSNotificationCenter defaultCenter]postNotificationName:SDLocationRenamedNotification object:@(location.locationID)];
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL)deleteLocationWithName:(NSString *)locationName roomID:(NSInteger)roomID {
+    SDLocation *location = [self queryLocationWithName:locationName roomID:roomID];
+    NSString *roomIDstr = SDno2Str(roomID);
+    if (self.maps[roomIDstr][locationName]) {
+        [self.maps[roomIDstr] removeObjectForKey:locationName];
+        [self.lists[roomIDstr] removeObject:location];
+        [self.db deleteObjectsFromTable:self.tableName where:SDLocation.name == locationName];
+
+        [[NSNotificationCenter  defaultCenter]postNotificationName:SDLocationDeletedNotification object:@(location.locationID)];
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL)addCustomLocationWithName:(NSString *)locationName inRoom:(NSInteger)roomID {
     SDLocation *newLocation = [[SDLocation alloc]init];
     newLocation.isAutoIncrement = YES;
     newLocation.name = locationName;
@@ -64,11 +177,18 @@ static NSString *const keyLocationVersion = @"location_version";
     newLocation.color = SD_THEME_COLOR;
     NSInteger maxIndex = [[self.db getOneValueOnResult:SDLocation.sortIndex.count() fromTable:self.tableName]integerValue];
     newLocation.sortIndex = maxIndex + 1;
-    [self.db insertObject:newLocation into:self.tableName];
 
-    [self.list addObject:newLocation];
-    NSString *key = [[NSString alloc]initWithFormat:@"%@", newLocation.name];
-    self.map[key] = newLocation;
+    NSString *roomIDstr = SDno2Str(roomID);
+    if (self.maps[roomIDstr][locationName] == nil) {
+        [self.db insertObject:newLocation into:self.tableName];
+
+        [self.lists[roomIDstr] addObject:newLocation];
+        self.maps[roomIDstr][locationName] = newLocation;
+
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 - (NSArray<SDLocation *> *)fetchCustomLocation {
@@ -77,60 +197,141 @@ static NSString *const keyLocationVersion = @"location_version";
     return res;
 }
 
+- (void)setupDefaultLocationInCustomRoom:(NSInteger)roomID type:(RoomType)type {
+    NSString *plistFile = [[NSBundle mainBundle]pathForResource:@"Location" ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc ]initWithContentsOfFile:plistFile];
+//    NSString *version = dict[@"version"];
+//    NSString *orderVersion = [KeyValueStore stringForKey:keyLocationVersion];
+    NSString *key;
+    switch (type) {
+        case RoomTypeBed:
+            key = @"bed";
+            break;
+        case RoomTypeWork:
+            key = @"work";
+            break;
+        case RoomTypeStorge:
+            key = @"storage";
+            break;
+        case RoomTypeStudy:
+            key = @"study";
+            break;
+        case RoomTypeCustom:
+            key = @"custom";
+            break;
+        default:
+            break;
+    }
+    [self insertAllWithPlistDict:dict key:key roomID:roomID];
+}
+
 #pragma mark -
 #pragma mark private method
 
-- (void)insertAllWithPlistDict:(NSDictionary *)dict {
-    NSArray *list = dict[@"list"];
+- (void)insertAllWithPlistDict:(NSDictionary *)dict key:(NSString *)key roomID:(NSInteger)roomID {
+    NSArray *list = dict[key];
+
+    //    使用内建列表
+    //    insertAllWithBuiltinList
+    if (!list) {
+        list = self.builtinList;
+    }
+    NSMutableArray *newLocationArr = [[NSMutableArray alloc]initWithCapacity:60];
+    NSMutableDictionary *newLocationDic = [[NSMutableDictionary alloc]initWithCapacity:60];
+
     [list enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL *_Nonnull stop) {
         SDLocation *location = [SDLocation yy_modelWithDictionary:dict];
         location.isAutoIncrement = YES;
+        location.roomID = roomID;
+
         if (location) {
-            [self.list addObject:location];
+            [newLocationArr addObject:location];
+            newLocationDic[location.name] = location;
         }
     }];
-    [self.db insertObjects:self.list into:self.tableName];
+    self.lists[SDno2Str(roomID)] = newLocationArr;
+    self.maps[SDno2Str(roomID)] = newLocationDic;
+    [self.db insertObjects:newLocationArr into:self.tableName];
 }
 
-- (void)setupCategories {
+- (void)setup {
     BOOL haveCache = [[self.db getOneValueOnResult:SDLocation.locationID.count() fromTable:self.tableName]unsignedIntegerValue] > 0;
-    NSString *plistFile = [[NSBundle mainBundle]pathForResource:@"Locations" ofType:@"plist"];
-    NSDictionary *dict = [[NSDictionary alloc ]initWithContentsOfFile:plistFile];
-    NSString *version = dict[@"version"];
-    NSString *orderVersion = [KeyValueStore stringForKey:keyLocationVersion];
 
-    if (!haveCache) {
-        [self insertAllWithPlistDict:dict];
-        DDLogInfo(@"[Location service]: insert location data");
-    } else if (!SDIsEqualString(version, orderVersion)) {
-        DDLogInfo(@"[Location service]: update location data");
-        if ([self isBetaVersion:orderVersion]) {
-            [self.db deleteAllObjectsFromTable:self.tableName];
-            [self insertAllWithPlistDict:dict];
-        }
-    } else {
-        WCTSelect *select = [self.db prepareSelectObjectsOfClass:SDLocation.class fromTable:self.tableName];
-        NSArray *res = select.allObjects;
-        [self.list addObjectsFromArray:res];
+    if (haveCache) {
+        [SDRoomService.service.roomLists enumerateKeysAndObjectsUsingBlock:^(NSString *_Nonnull key, NSArray<SDRoom *> *_Nonnull roomArr, BOOL *_Nonnull stop) {
+            [roomArr enumerateObjectsUsingBlock:^(SDRoom *_Nonnull room, NSUInteger idx, BOOL *_Nonnull stop) {
+                NSArray<SDLocation *> *res = [self.db getObjectsOfClass:SDLocation.class
+                                                              fromTable:self.tableName
+                                                                  where:SDLocation.roomID == room.roomID];
+                self.lists[SDno2Str(room.roomID)] = res.mutableCopy;
+                NSMutableDictionary *map = [[NSMutableDictionary alloc]initWithCapacity:res.count];
+                [res enumerateObjectsUsingBlock:^(SDLocation *_Nonnull location, NSUInteger idx, BOOL *_Nonnull stop) {
+                    map[location.name] = location;
+                }];
+                self.maps[SDno2Str(room.roomID)] = map;
+            }];
+        }];
+
         DDLogInfo(@"[Location service]: load location data from cache");
     }
 
-    [KeyValueStore setString:version forKey:keyLocationVersion];
+    NSString *defaultLocationKey = [KeyValueStore valueForKey:keyDefaultLocation];
+    NSArray *defaultLocationKeys = [defaultLocationKey componentsSeparatedByString:@"_"];
 
-    [self.list enumerateObjectsUsingBlock:^(SDLocation *location, NSUInteger idx, BOOL *_Nonnull stop) {
-        NSString *key = [NSString stringWithFormat:@"_%@", location.name];
-        self.map[key] = location;
-    }];
+    if (defaultLocationKeys.count == 2) {
+        self.defaultLocation = self.maps[defaultLocationKeys[0]][defaultLocationKeys[1]];
+    } else {
+        NSString *key = SDno2Str(SDRoomService.service.defaultRoom.roomID);
+        SDLocation *defaultLocation = [self.lists[key] firstObject];
+        [self configDefaultLocationWithName:defaultLocation.name roomID:defaultLocation.roomID];
+    }
 }
 
-- (BOOL)isBetaVersion:(NSString *)version {
-    float v = version.floatValue;
-    return v < 1.0;
+//- (BOOL)isBetaVersion:(NSString *)version {
+//    float v = version.floatValue;
+//    return v < 1.0;
+//}
+
+- (NSArray *)builtinListNames {
+    return @[@"默认位置"];
+}
+
+- (NSArray *)builtinList {
+    NSMutableArray *list = [NSMutableArray arrayWithCapacity:5];
+    [[self builtinListNames] enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:5];
+        dict[@"name"] = obj;
+        dict[@"iconName"] = self.builtinListIcons[idx];
+        dict[@"color"] = self.builtinListColors[idx];
+        dict[@"builtin"] = @YES;
+        [list addObject:dict.copy];
+    }];
+    return list.copy;
+}
+
+- (void)onDefaultRoomChanged:(NSNotification *)notification {
+    if ([notification.object isKindOfClass:NSNumber.class]) {
+        NSInteger newDefaultRoomID = [notification.object integerValue];
+        SDLocation *location = [self.lists[SDno2Str(newDefaultRoomID)] firstObject];
+        [self configDefaultLocationWithName:location.name roomID:newDefaultRoomID];
+    }
+}
+
+- (void)onRoomDeleted:(NSNotification *)notification {
+    if ([notification.object isKindOfClass:NSNumber.class]) {
+        NSInteger deletedRoomID = [notification.object integerValue];
+        NSString *key = SDno2Str(deletedRoomID);
+        [self.lists[key] enumerateObjectsUsingBlock:^(SDLocation *_Nonnull location, NSUInteger idx, BOOL *_Nonnull stop) {
+            [self deleteLocationWithName:location.name
+                                  roomID:deletedRoomID];
+        }];
+        [self.lists removeObjectForKey:key];
+        [self.maps removeObjectForKey:key];
+    }
 }
 
 #pragma mark -
 #pragma mark private property
-
 - (NSString *)tableName {
     return @"location";
 }
@@ -138,8 +339,13 @@ static NSString *const keyLocationVersion = @"location_version";
 #pragma mark -
 #pragma mark property
 
-- (NSArray<SDLocation *> *)locationList {
-    return self.list.copy;
+- (NSDictionary<NSString *, NSArray<SDLocation *> *> *)locationLists {
+    NSMutableDictionary *res = [[NSMutableDictionary alloc]initWithCapacity:self.lists.count];
+    [self.lists enumerateKeysAndObjectsUsingBlock:^(NSString *_Nonnull key, NSMutableArray<SDLocation *> *_Nonnull locationArr, BOOL *_Nonnull stop) {
+        res[key] = locationArr.copy;
+    }];
+
+    return res.copy;
 }
 
 @end

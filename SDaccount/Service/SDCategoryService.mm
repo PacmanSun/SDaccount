@@ -20,7 +20,7 @@ static NSString *const keyCategoryVersion = @"category_version";
 @property (nonatomic, strong) NSMutableDictionary *map;
 
 - (void)insertAllWithPlistDict:(NSDictionary *)dict;
-- (void)setupCategories;
+- (void)setup;
 - (BOOL)isBetaVersion:(NSString *)version;
 @end
 
@@ -44,6 +44,7 @@ static NSString *const keyCategoryVersion = @"category_version";
 
         _db = DBManager.database;
         [_db createTableAndIndexesOfName:self.tableName withClass:[SDCategory class]];
+        [self setup];
     }
     return self;
 }
@@ -90,7 +91,7 @@ static NSString *const keyCategoryVersion = @"category_version";
     [self.db insertObjects:self.list into:self.tableName];
 }
 
-- (void)setupCategories {
+- (void)setup {
     BOOL haveCache = [[self.db getOneValueOnResult:SDCategory.categoryID.count() fromTable:self.tableName]unsignedIntegerValue] > 0;
     NSString *plistFile = [[NSBundle mainBundle]pathForResource:@"Categories" ofType:@"plist"];
     NSDictionary *dict = [[NSDictionary alloc]initWithContentsOfFile:plistFile];

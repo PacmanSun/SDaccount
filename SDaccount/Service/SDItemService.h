@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)service;
 
 - (SDItem *)queryItemWithName:(NSString *)itemName;
-- (void)addItemWithName:(NSString *)itemName;
+- (void)addItemWithName:(NSString *)itemName ofCategory:(NSInteger)categoryID inLocation:(NSInteger)locationID;
 - (NSArray<SDItem *> *)fetchItems;
 
 @end

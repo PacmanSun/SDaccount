@@ -53,4 +53,7 @@
 #define SDNotificationCenter [NSNotificationCenter defaultCenter]
 #define SDKeyWindow [UIApplication sharedApplication].keyWindow
 
+#define SDformatString(...) [NSString stringWithFormat:​__VA_ARGS__]
+#define SDno2Str(number) [NSString stringWithFormat:@"%ld",number]
+
 #endif /* Macro_h */

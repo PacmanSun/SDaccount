@@ -17,7 +17,7 @@
 @property (nonatomic, strong) NSMutableArray *list;
 @property (nonatomic, strong) NSMutableDictionary *map;
 
-- (void)setupItems;
+- (void)setup;
 
 @end
 
@@ -51,12 +51,14 @@
     return self.map[key];
 }
 
-- (void)addItemWithName:(NSString *)itemName {
+- (void)addItemWithName:(NSString *)itemName ofCategory:(NSInteger)categoryID inLocation:(NSInteger)locationID {
     SDItem *newItem = [[SDItem alloc]init];
     newItem.isAutoIncrement = YES;
     newItem.name = itemName;
     NSInteger maxIndex = [[self.db getOneValueOnResult:SDItem.sortIndex.count() fromTable:self.tableName]integerValue];
     newItem.sortIndex = maxIndex + 1;
+    newItem.categoryID = categoryID;
+    newItem.locationID = locationID;
     [self.db insertObject:newItem into:self.tableName];
 
     [self.list addObject:newItem];
@@ -73,7 +75,7 @@
 #pragma mark -
 #pragma mark pritate method
 
-- (void)setupItems {
+- (void)setup {
     WCTSelect *select = [self.db prepareSelectObjectsOfClass:SDItem.class fromTable:self.tableName];
     NSArray *res = select.allObjects;
     [self.list addObjectsFromArray:res];

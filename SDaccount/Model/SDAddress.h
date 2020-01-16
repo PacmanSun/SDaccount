@@ -1,20 +1,19 @@
 //
-//  SDLocation.h
+//  SDAddress.h
 //  SDaccount
 //
-//  Created by SunLi on 2019/10/4.
+//  Created by SunLi on 2019/11/1.
 //  Copyright © 2019 PacmanSun. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "SDRoom.h"
 
 NS_ASSUME_NONNULL_BEGIN
-@class SDItem;
 
-@interface SDLocation : NSObject
+@interface SDAddress : NSObject
 
-@property (nonatomic, assign) NSInteger locationID;
-@property (nonatomic, assign) NSInteger roomID;
+@property (nonatomic, assign) NSInteger addressID;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *iconName;
 @property (nonatomic, assign) NSInteger builtin;
@@ -22,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *color;
 
 //non-store
-@property (nonatomic, strong) NSMutableArray<SDItem *> *itemList;
-@property (nonatomic, strong) NSMutableDictionary<NSString *, SDItem *> *itemMap;
+@property (nonatomic, strong) NSMutableArray<SDRoom *> *roomList;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, SDRoom *> *roomMap;
 
 @end
 

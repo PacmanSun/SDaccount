@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SDItem (WCTTableCoding) <WCTTableCoding>
 
 WCDB_PROPERTY(itemID)
-WCDB_PROPERTY(category)
-WCDB_PROPERTY(location)
+WCDB_PROPERTY(categoryID)
+WCDB_PROPERTY(locationID)
 WCDB_PROPERTY(sortIndex)
 WCDB_PROPERTY(name)
 

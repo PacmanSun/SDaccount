@@ -1,30 +1,30 @@
 //
-//  SDCategory.m
+//  SDAddress.m
 //  SDaccount
 //
-//  Created by SunLi on 2019/9/29.
+//  Created by SunLi on 2019/11/1.
 //  Copyright © 2019 PacmanSun. All rights reserved.
 //
 
-#import "SDCategory.h"
+#import "SDAddress.h"
 #import <WCDB/WCDB.h>
 
-@interface SDCategory () <WCTTableCoding, YYModel>
+@interface SDAddress () <WCTTableCoding, YYModel>
 
 @end
 
-@implementation SDCategory
+@implementation SDAddress
 
-WCDB_IMPLEMENTATION(SDCategory)
+WCDB_IMPLEMENTATION(SDAddress)
 
-WCDB_SYNTHESIZE(SDCategory, categoryID)
-WCDB_SYNTHESIZE(SDCategory, name)
-WCDB_SYNTHESIZE(SDCategory, iconName)
-WCDB_SYNTHESIZE(SDCategory, builtin)
-WCDB_SYNTHESIZE(SDCategory, sortIndex)
-WCDB_SYNTHESIZE(SDCategory, color)
+WCDB_SYNTHESIZE(SDAddress, addressID)
+WCDB_SYNTHESIZE(SDAddress, name)
+WCDB_SYNTHESIZE(SDAddress, iconName)
+WCDB_SYNTHESIZE(SDAddress, builtin)
+WCDB_SYNTHESIZE(SDAddress, sortIndex)
+WCDB_SYNTHESIZE(SDAddress, color)
 
-WCDB_PRIMARY_AUTO_INCREMENT(SDCategory, categoryID)
+WCDB_PRIMARY_AUTO_INCREMENT(SDAddress, addressID)
 
 #pragma mark -
 #pragma mark YYModel

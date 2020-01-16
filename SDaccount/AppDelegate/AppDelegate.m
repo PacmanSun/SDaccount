@@ -29,15 +29,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [AppContext startupflow];
-    //初始化 APNs
-    JPUSHRegisterEntity *entity = [[JPUSHRegisterEntity alloc] init];
-    entity.types = JPAuthorizationOptionAlert | JPAuthorizationOptionBadge | JPAuthorizationOptionSound;
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+        //初始化 APNs
+        JPUSHRegisterEntity *entity = [[JPUSHRegisterEntity alloc] init];
+        entity.types = JPAuthorizationOptionAlert | JPAuthorizationOptionBadge | JPAuthorizationOptionSound;
+        [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    } else if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
         // 可以添加自定义 categories
         // NSSet<UNNotificationCategory *> *categories for iOS10 or later
         // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
+        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                                 UIUserNotificationTypeSound |
+                                                                 UIUserNotificationTypeAlert)
+                                                     categories:nil];
     }
-    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+
     //初始化 JPush
     [JPUSHService setupWithOption:launchOptions
                            appKey:@"54e06cfdb6717d5d437d2d18"
@@ -90,7 +97,8 @@
 #pragma mark <JPUSHRegisterDelegate>
 // iOS 10 Support
 
-- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler API_AVAILABLE(ios(10.0))
+{
     // Required
     NSDictionary *userInfo = notification.request.content.userInfo;
     if ([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
@@ -100,7 +108,8 @@
 }
 
 // iOS 10 Support
-- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler  API_AVAILABLE(ios(10.0))
+{
     // Required
     NSDictionary *userInfo = response.notification.request.content.userInfo;
     if ([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
@@ -109,7 +118,8 @@
     completionHandler(); // 系统要求执行这个方法
 }
 
-- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification {
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification  API_AVAILABLE(ios(12.0))
+{
     if (notification && [notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         //从通知界面直接进入应用
     } else {

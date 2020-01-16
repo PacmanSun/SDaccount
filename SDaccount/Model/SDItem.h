@@ -14,11 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SDItem : NSObject
 
-@property (nonatomic, strong) SDCategory *category;
-@property (nonatomic, strong) SDLocation *location;
+@property (nonatomic, assign) NSInteger itemID;
+@property (nonatomic, assign) NSInteger categoryID;
+@property (nonatomic, assign) NSInteger locationID;
 @property (nonatomic, assign) NSInteger sortIndex;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, assign) NSInteger itemID;
 
 @end
 

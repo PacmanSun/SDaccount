@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A11060E623275650003F500D /* SDNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11060E523275650003F500D /* SDNaviController.m */; };
 		A11060E9232759BF003F500D /* SDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11060E8232759BF003F500D /* SDWebViewController.m */; };
+		A112CA25236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = A112CA24236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.m */; };
+		A112CA2823643F3E0006ACAC /* SDThemeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A112CA2723643F3E0006ACAC /* SDThemeCellTableViewCell.m */; };
 		A117B9EC23255F1700D285FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A117B9EB23255F1700D285FB /* AppDelegate.m */; };
 		A117B9F423255F1900D285FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A117B9F323255F1900D285FB /* Assets.xcassets */; };
 		A117B9F723255F1900D285FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A117B9F523255F1900D285FB /* LaunchScreen.storyboard */; };
@@ -36,8 +38,8 @@
 		A1377158234031CB00263482 /* SDCategoryService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1377157234031CB00263482 /* SDCategoryService.mm */; };
 		A137715B23405DC100263482 /* SDCategory.mm in Sources */ = {isa = PBXBuildFile; fileRef = A137715A23405DC100263482 /* SDCategory.mm */; };
 		A1491481233E07BF003F40F3 /* SDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1491480233E07BF003F40F3 /* SDThemeManager.m */; };
-		A14A746A23472F0A00DF2795 /* SDLocationService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A14A746923472F0A00DF2795 /* SDLocationService.mm */; };
 		A14A746D23472F2A00DF2795 /* SDItemService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A14A746C23472F2A00DF2795 /* SDItemService.mm */; };
+		A166437623BAD5CE00FE4135 /* SDLocationService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A14A746923472F0A00DF2795 /* SDLocationService.mm */; };
 		A16AFCEF235E4D950031511F /* SDAppContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = A16AFCEE235E4D950031511F /* SDAppContext.mm */; };
 		A16E703B23546BA800E5DB64 /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = A16E703A23546BA800E5DB64 /* Locations.plist */; };
 		A16E70462354CBF100E5DB64 /* SDCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16E70452354CBF100E5DB64 /* SDCategoryViewController.m */; };
@@ -52,7 +54,15 @@
 		A16E705F2354D25100E5DB64 /* SDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16E705D2354D25100E5DB64 /* SDAboutViewController.xib */; };
 		A16E70622354D47700E5DB64 /* SDTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16E70612354D47700E5DB64 /* SDTabViewController.m */; };
 		A16E70652354D49600E5DB64 /* SDTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A16E70642354D49600E5DB64 /* SDTabBarItem.m */; };
+		A17E2FEF236BCFD500F16570 /* SDAddress.mm in Sources */ = {isa = PBXBuildFile; fileRef = A17E2FEE236BCFD500F16570 /* SDAddress.mm */; };
+		A1807C4B23641D0E0079F25B /* SDStaticTableCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = A1807C4A23641D0E0079F25B /* SDStaticTableCellData.m */; };
+		A1807C4E23641D270079F25B /* SDStaticTableSectionData.m in Sources */ = {isa = PBXBuildFile; fileRef = A1807C4D23641D270079F25B /* SDStaticTableSectionData.m */; };
+		A18AF35E23D0733000B31A14 /* Room.plist in Resources */ = {isa = PBXBuildFile; fileRef = A18AF35D23D0733000B31A14 /* Room.plist */; };
+		A1996362236AFF06004392EF /* SDRoom.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1996361236AFF06004392EF /* SDRoom.mm */; };
 		A1BF46C22358E15A00370D21 /* SDAddItemPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF46C12358E15A00370D21 /* SDAddItemPresenter.m */; };
+		A1CCF20A236E748B00E3F6D1 /* SDRoomService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF205236DA6D500E3F6D1 /* SDRoomService.mm */; };
+		A1CCF20D236E906600E3F6D1 /* SDAddressService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF208236DA6EA00E3F6D1 /* SDAddressService.mm */; };
+		A1FE75ED2366D48F00533E22 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1FE75EC2366D48F00533E22 /* AliyunEmasServices-Info.plist */; };
 		ACD60D370E0ED04E96FF988E /* Pods_SDaccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05746542E962966322BCB26 /* Pods_SDaccount.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +73,10 @@
 		A11060E523275650003F500D /* SDNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNaviController.m; sourceTree = "<group>"; };
 		A11060E7232759BF003F500D /* SDWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebViewController.h; sourceTree = "<group>"; };
 		A11060E8232759BF003F500D /* SDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebViewController.m; sourceTree = "<group>"; };
+		A112CA23236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+SDStaticDataBinding.h"; sourceTree = "<group>"; };
+		A112CA24236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+SDStaticDataBinding.m"; sourceTree = "<group>"; };
+		A112CA2623643F3E0006ACAC /* SDThemeCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDThemeCellTableViewCell.h; sourceTree = "<group>"; };
+		A112CA2723643F3E0006ACAC /* SDThemeCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDThemeCellTableViewCell.m; sourceTree = "<group>"; };
 		A117B9E723255F1700D285FB /* SDaccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDaccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A117B9EA23255F1700D285FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A117B9EB23255F1700D285FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -156,9 +170,25 @@
 		A16E70612354D47700E5DB64 /* SDTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTabViewController.m; sourceTree = "<group>"; };
 		A16E70632354D49600E5DB64 /* SDTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDTabBarItem.h; sourceTree = "<group>"; };
 		A16E70642354D49600E5DB64 /* SDTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTabBarItem.m; sourceTree = "<group>"; };
+		A17E2FED236BCFD500F16570 /* SDAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAddress.h; sourceTree = "<group>"; };
+		A17E2FEE236BCFD500F16570 /* SDAddress.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDAddress.mm; sourceTree = "<group>"; };
 		A1807C462362348A0079F25B /* SDaccount.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SDaccount.entitlements; sourceTree = "<group>"; };
+		A1807C4923641D0E0079F25B /* SDStaticTableCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDStaticTableCellData.h; sourceTree = "<group>"; };
+		A1807C4A23641D0E0079F25B /* SDStaticTableCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDStaticTableCellData.m; sourceTree = "<group>"; };
+		A1807C4C23641D270079F25B /* SDStaticTableSectionData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDStaticTableSectionData.h; sourceTree = "<group>"; };
+		A1807C4D23641D270079F25B /* SDStaticTableSectionData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDStaticTableSectionData.m; sourceTree = "<group>"; };
+		A18AF35D23D0733000B31A14 /* Room.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Room.plist; sourceTree = "<group>"; };
+		A1996360236AFF06004392EF /* SDRoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDRoom.h; sourceTree = "<group>"; };
+		A1996361236AFF06004392EF /* SDRoom.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDRoom.mm; sourceTree = "<group>"; };
+		A1B112F3236D2E0D00E49281 /* SDRoom+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDRoom+WCTTableCoding.h"; sourceTree = "<group>"; };
+		A1B112F6236D2F1A00E49281 /* SDAddress+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDAddress+WCTTableCoding.h"; sourceTree = "<group>"; };
 		A1BF46C02358E15A00370D21 /* SDAddItemPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAddItemPresenter.h; sourceTree = "<group>"; };
 		A1BF46C12358E15A00370D21 /* SDAddItemPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAddItemPresenter.m; sourceTree = "<group>"; };
+		A1CCF204236DA6D500E3F6D1 /* SDRoomService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDRoomService.h; sourceTree = "<group>"; };
+		A1CCF205236DA6D500E3F6D1 /* SDRoomService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDRoomService.mm; sourceTree = "<group>"; };
+		A1CCF207236DA6EA00E3F6D1 /* SDAddressService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAddressService.h; sourceTree = "<group>"; };
+		A1CCF208236DA6EA00E3F6D1 /* SDAddressService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDAddressService.mm; sourceTree = "<group>"; };
+		A1FE75EC2366D48F00533E22 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
 		F05746542E962966322BCB26 /* Pods_SDaccount.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDaccount.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -266,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				A117BA07232573C900D285FB /* View */,
+				A1807C4823641CE10079F25B /* model */,
 				A16E70552354D20800E5DB64 /* SDMoreViewController.h */,
 				A16E70562354D20800E5DB64 /* SDMoreViewController.m */,
 				A16E70582354D21E00E5DB64 /* SDThemeViewController.h */,
@@ -304,6 +335,10 @@
 		A117BA07232573C900D285FB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A112CA23236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.h */,
+				A112CA24236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.m */,
+				A112CA2623643F3E0006ACAC /* SDThemeCellTableViewCell.h */,
+				A112CA2723643F3E0006ACAC /* SDThemeCellTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +387,10 @@
 				A1377157234031CB00263482 /* SDCategoryService.mm */,
 				A14A746823472F0A00DF2795 /* SDLocationService.h */,
 				A14A746923472F0A00DF2795 /* SDLocationService.mm */,
+				A1CCF204236DA6D500E3F6D1 /* SDRoomService.h */,
+				A1CCF205236DA6D500E3F6D1 /* SDRoomService.mm */,
+				A1CCF207236DA6EA00E3F6D1 /* SDAddressService.h */,
+				A1CCF208236DA6EA00E3F6D1 /* SDAddressService.mm */,
 				A14A746B23472F2A00DF2795 /* SDItemService.h */,
 				A14A746C23472F2A00DF2795 /* SDItemService.mm */,
 			);
@@ -367,6 +406,12 @@
 				A1191AE2234716A7007542C2 /* SDLocation.h */,
 				A1191AE3234716A7007542C2 /* SDLocation.mm */,
 				A1191AE523471F38007542C2 /* SDLocation+WCTTableCoding.h */,
+				A1996360236AFF06004392EF /* SDRoom.h */,
+				A1996361236AFF06004392EF /* SDRoom.mm */,
+				A1B112F3236D2E0D00E49281 /* SDRoom+WCTTableCoding.h */,
+				A17E2FED236BCFD500F16570 /* SDAddress.h */,
+				A17E2FEE236BCFD500F16570 /* SDAddress.mm */,
+				A1B112F6236D2F1A00E49281 /* SDAddress+WCTTableCoding.h */,
 				A1191AE823472002007542C2 /* SDItem.h */,
 				A1191AE923472002007542C2 /* SDItem.mm */,
 				A14A74652347267600DF2795 /* SDItem+WCTTableCoding.h */,
@@ -380,6 +425,7 @@
 				A117B9F323255F1900D285FB /* Assets.xcassets */,
 				A1191AE023470E5C007542C2 /* Categories.plist */,
 				A16E703A23546BA800E5DB64 /* Locations.plist */,
+				A18AF35D23D0733000B31A14 /* Room.plist */,
 				A16E70532354D06000E5DB64 /* Library.html */,
 			);
 			path = Resource;
@@ -392,6 +438,7 @@
 				A117B9F823255F1900D285FB /* Info.plist */,
 				A117B9F923255F1900D285FB /* main.m */,
 				A1807C462362348A0079F25B /* SDaccount.entitlements */,
+				A1FE75EC2366D48F00533E22 /* AliyunEmasServices-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -507,6 +554,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A1807C4823641CE10079F25B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A1807C4C23641D270079F25B /* SDStaticTableSectionData.h */,
+				A1807C4D23641D270079F25B /* SDStaticTableSectionData.m */,
+				A1807C4923641D0E0079F25B /* SDStaticTableCellData.h */,
+				A1807C4A23641D0E0079F25B /* SDStaticTableCellData.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		CDB950EAE664A2936067FDB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,11 +634,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16E705F2354D25100E5DB64 /* SDAboutViewController.xib in Resources */,
+				A18AF35E23D0733000B31A14 /* Room.plist in Resources */,
 				A16E70542354D06000E5DB64 /* Library.html in Resources */,
 				A1191AE123470E5C007542C2 /* Categories.plist in Resources */,
 				A117B9F723255F1900D285FB /* LaunchScreen.storyboard in Resources */,
 				A16E703B23546BA800E5DB64 /* Locations.plist in Resources */,
 				A117B9F423255F1900D285FB /* Assets.xcassets in Resources */,
+				A1FE75ED2366D48F00533E22 /* AliyunEmasServices-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,15 +745,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1191AE4234716A7007542C2 /* SDLocation.mm in Sources */,
+				A1807C4B23641D0E0079F25B /* SDStaticTableCellData.m in Sources */,
 				A117B9FA23255F1900D285FB /* main.m in Sources */,
 				A117BA73232577F300D285FB /* UINavigationController+KMNavigationBarTransition.m in Sources */,
 				A16E70462354CBF100E5DB64 /* SDCategoryViewController.m in Sources */,
 				A1BF46C22358E15A00370D21 /* SDAddItemPresenter.m in Sources */,
-				A14A746A23472F0A00DF2795 /* SDLocationService.mm in Sources */,
 				A16E704F2354CFB500E5DB64 /* SDReportViewController.m in Sources */,
 				A16E70622354D47700E5DB64 /* SDTabViewController.m in Sources */,
+				A112CA25236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.m in Sources */,
+				A1807C4E23641D270079F25B /* SDStaticTableSectionData.m in Sources */,
 				A11060E9232759BF003F500D /* SDWebViewController.m in Sources */,
 				A117B9EC23255F1700D285FB /* AppDelegate.m in Sources */,
+				A1CCF20A236E748B00E3F6D1 /* SDRoomService.mm in Sources */,
 				A16E70572354D20800E5DB64 /* SDMoreViewController.m in Sources */,
 				A16E70522354CFF100E5DB64 /* SDCategoryDetailViewController.m in Sources */,
 				A1377146233EB77600263482 /* SDThemePurple.m in Sources */,
@@ -704,16 +767,21 @@
 				A117BA72232577F300D285FB /* UINavigationBar+KMNavigationBarTransition.m in Sources */,
 				A16E705A2354D21F00E5DB64 /* SDThemeViewController.m in Sources */,
 				A117BA6F232577F300D285FB /* UIViewController+KMNavigationBarTransition.m in Sources */,
+				A17E2FEF236BCFD500F16570 /* SDAddress.mm in Sources */,
 				A117BA75232577F300D285FB /* NSObject+KMNavigationBarTransition.m in Sources */,
 				A16E70492354CCF600E5DB64 /* SDListViewController.m in Sources */,
 				A1377149233EBCCF00263482 /* SDThemeDefault.m in Sources */,
 				A1491481233E07BF003F40F3 /* SDThemeManager.m in Sources */,
 				A117BA71232577F300D285FB /* KMWeakObjectContainer.m in Sources */,
+				A166437623BAD5CE00FE4135 /* SDLocationService.mm in Sources */,
 				A117BA862326A57900D285FB /* QMUIConfigurationTemplate.m in Sources */,
+				A1CCF20D236E906600E3F6D1 /* SDAddressService.mm in Sources */,
 				A16E705E2354D25100E5DB64 /* SDAboutViewController.m in Sources */,
+				A112CA2823643F3E0006ACAC /* SDThemeCellTableViewCell.m in Sources */,
 				A117BA8B2326A7C700D285FB /* SDUtil.m in Sources */,
 				A137714C233ECCE200263482 /* SDTimeCenter.m in Sources */,
 				A117BA7D23267A2900D285FB /* SDBaseViewController.m in Sources */,
+				A1996362236AFF06004392EF /* SDRoom.mm in Sources */,
 				A16AFCEF235E4D950031511F /* SDAppContext.mm in Sources */,
 				A117BA74232577F300D285FB /* KMSwizzle.m in Sources */,
 				A1377155233F6F1800263482 /* SDDBManager.mm in Sources */,
@@ -792,7 +860,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -845,7 +913,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -858,10 +926,11 @@
 			baseConfigurationReference = 2D8E38C7F8D245C4B0C5FEBA /* Pods-SDaccount.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "SDaccount/拾得.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "SDaccount/Supporting Files/SDaccount.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 191029_1143;
+				DEVELOPMENT_TEAM = C4X35KSX5P;
 				GCC_PREFIX_HEADER = SDaccount/Common/PrefixHeader.pch;
 				INFOPLIST_FILE = "SDaccount/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -880,10 +949,11 @@
 			baseConfigurationReference = 2B89C74C3ADA1440718224A9 /* Pods-SDaccount.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "SDaccount/拾得.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "SDaccount/Supporting Files/SDaccount.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 191029_1143;
+				DEVELOPMENT_TEAM = C4X35KSX5P;
 				GCC_PREFIX_HEADER = SDaccount/Common/PrefixHeader.pch;
 				INFOPLIST_FILE = "SDaccount/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -907,7 +977,7 @@
 				A117B9FC23255F1900D285FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		A117B9FD23255F1900D285FB /* Build configuration list for PBXNativeTarget "SDaccount" */ = {
 			isa = XCConfigurationList;
@@ -916,7 +986,7 @@
 				A117B9FF23255F1900D285FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

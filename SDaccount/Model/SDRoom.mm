@@ -1,30 +1,31 @@
 //
-//  SDCategory.m
+//  SDRoom.m
 //  SDaccount
 //
-//  Created by SunLi on 2019/9/29.
+//  Created by SunLi on 2019/10/31.
 //  Copyright © 2019 PacmanSun. All rights reserved.
 //
 
-#import "SDCategory.h"
+#import "SDRoom.h"
 #import <WCDB/WCDB.h>
 
-@interface SDCategory () <WCTTableCoding, YYModel>
+@interface SDRoom () <WCTTableCoding, YYModel>
 
 @end
 
-@implementation SDCategory
+@implementation SDRoom
 
-WCDB_IMPLEMENTATION(SDCategory)
+WCDB_IMPLEMENTATION(SDRoom)
 
-WCDB_SYNTHESIZE(SDCategory, categoryID)
-WCDB_SYNTHESIZE(SDCategory, name)
-WCDB_SYNTHESIZE(SDCategory, iconName)
-WCDB_SYNTHESIZE(SDCategory, builtin)
-WCDB_SYNTHESIZE(SDCategory, sortIndex)
-WCDB_SYNTHESIZE(SDCategory, color)
+WCDB_SYNTHESIZE(SDRoom, roomID)
+WCDB_SYNTHESIZE(SDRoom, addressID)
+WCDB_SYNTHESIZE(SDRoom, name)
+WCDB_SYNTHESIZE(SDRoom, iconName)
+WCDB_SYNTHESIZE(SDRoom, builtin)
+WCDB_SYNTHESIZE(SDRoom, sortIndex)
+WCDB_SYNTHESIZE(SDRoom, color)
 
-WCDB_PRIMARY_AUTO_INCREMENT(SDCategory, categoryID)
+WCDB_PRIMARY_AUTO_INCREMENT(SDRoom, roomID)
 
 #pragma mark -
 #pragma mark YYModel
