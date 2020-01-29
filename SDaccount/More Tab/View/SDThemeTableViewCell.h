@@ -1,5 +1,5 @@
 //
-//  SDThemeCellTableViewCell.h
+//  SDThemeTableViewCell.h
 //  SDaccount
 //
 //  Created by SunLi on 2019/10/26.
@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SDThemeCellTableViewCell : QMUITableViewCell
+@interface SDThemeTableViewCell : QMUITableViewCell
 
 - (void)bindTheme:(id<SDThemeProtocol>)theme;
 - (void)setChecked:(BOOL)checked animated:(BOOL)animated;

@@ -10,7 +10,7 @@
 		A11060E623275650003F500D /* SDNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11060E523275650003F500D /* SDNaviController.m */; };
 		A11060E9232759BF003F500D /* SDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11060E8232759BF003F500D /* SDWebViewController.m */; };
 		A112CA25236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = A112CA24236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.m */; };
-		A112CA2823643F3E0006ACAC /* SDThemeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A112CA2723643F3E0006ACAC /* SDThemeCellTableViewCell.m */; };
+		A112CA2823643F3E0006ACAC /* SDThemeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A112CA2723643F3E0006ACAC /* SDThemeTableViewCell.m */; };
 		A117B9EC23255F1700D285FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A117B9EB23255F1700D285FB /* AppDelegate.m */; };
 		A117B9F423255F1900D285FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A117B9F323255F1900D285FB /* Assets.xcassets */; };
 		A117B9F723255F1900D285FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A117B9F523255F1900D285FB /* LaunchScreen.storyboard */; };
@@ -75,8 +75,8 @@
 		A11060E8232759BF003F500D /* SDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebViewController.m; sourceTree = "<group>"; };
 		A112CA23236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+SDStaticDataBinding.h"; sourceTree = "<group>"; };
 		A112CA24236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+SDStaticDataBinding.m"; sourceTree = "<group>"; };
-		A112CA2623643F3E0006ACAC /* SDThemeCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDThemeCellTableViewCell.h; sourceTree = "<group>"; };
-		A112CA2723643F3E0006ACAC /* SDThemeCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDThemeCellTableViewCell.m; sourceTree = "<group>"; };
+		A112CA2623643F3E0006ACAC /* SDThemeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDThemeTableViewCell.h; sourceTree = "<group>"; };
+		A112CA2723643F3E0006ACAC /* SDThemeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDThemeTableViewCell.m; sourceTree = "<group>"; };
 		A117B9E723255F1700D285FB /* SDaccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDaccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A117B9EA23255F1700D285FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A117B9EB23255F1700D285FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -337,8 +337,8 @@
 			children = (
 				A112CA23236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.h */,
 				A112CA24236436D70006ACAC /* UITableViewCell+SDStaticDataBinding.m */,
-				A112CA2623643F3E0006ACAC /* SDThemeCellTableViewCell.h */,
-				A112CA2723643F3E0006ACAC /* SDThemeCellTableViewCell.m */,
+				A112CA2623643F3E0006ACAC /* SDThemeTableViewCell.h */,
+				A112CA2723643F3E0006ACAC /* SDThemeTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -777,7 +777,7 @@
 				A117BA862326A57900D285FB /* QMUIConfigurationTemplate.m in Sources */,
 				A1CCF20D236E906600E3F6D1 /* SDAddressService.mm in Sources */,
 				A16E705E2354D25100E5DB64 /* SDAboutViewController.m in Sources */,
-				A112CA2823643F3E0006ACAC /* SDThemeCellTableViewCell.m in Sources */,
+				A112CA2823643F3E0006ACAC /* SDThemeTableViewCell.m in Sources */,
 				A117BA8B2326A7C700D285FB /* SDUtil.m in Sources */,
 				A137714C233ECCE200263482 /* SDTimeCenter.m in Sources */,
 				A117BA7D23267A2900D285FB /* SDBaseViewController.m in Sources */,

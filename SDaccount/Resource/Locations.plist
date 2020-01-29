@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>list</key>
+	<key>bed</key>
 	<dict>
 		<key>item 0</key>
 		<dict>
@@ -49,7 +49,10 @@
 			<key>color</key>
 			<string>#e6ee9c</string>
 		</dict>
-		<key>item 3</key>
+	</dict>
+	<key>work</key>
+	<dict>
+		<key>item 0</key>
 		<dict>
 			<key>locationID</key>
 			<integer>0</integer>
@@ -60,11 +63,11 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>3</integer>
+			<integer>0</integer>
 			<key>color</key>
-			<string>#fff59d</string>
+			<string>#a5d6a7</string>
 		</dict>
-		<key>item 4</key>
+		<key>item 1</key>
 		<dict>
 			<key>locationID</key>
 			<integer>0</integer>
@@ -75,11 +78,11 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>4</integer>
+			<integer>1</integer>
 			<key>color</key>
-			<string>#ffe082</string>
+			<string>#c5e1a5</string>
 		</dict>
-		<key>item 5</key>
+		<key>item 2</key>
 		<dict>
 			<key>locationID</key>
 			<integer>0</integer>
@@ -90,11 +93,14 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>5</integer>
+			<integer>2</integer>
 			<key>color</key>
-			<string>#ffcc80</string>
+			<string>#e6ee9c</string>
 		</dict>
-		<key>item 6</key>
+	</dict>
+	<key>storage</key>
+	<dict>
+		<key>item 0</key>
 		<dict>
 			<key>locationID</key>
 			<integer>0</integer>
@@ -105,11 +111,11 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>6</integer>
+			<integer>0</integer>
 			<key>color</key>
-			<string>#ffab91</string>
+			<string>#a5d6a7</string>
 		</dict>
-		<key>item 7</key>
+		<key>item 1</key>
 		<dict>
 			<key>locationID</key>
 			<integer>0</integer>
@@ -120,11 +126,11 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>7</integer>
+			<integer>1</integer>
 			<key>color</key>
-			<string>#bcaaa4</string>
+			<string>#c5e1a5</string>
 		</dict>
-		<key>item 8</key>
+		<key>item 2</key>
 		<dict>
 			<key>locationID</key>
 			<integer>0</integer>
@@ -135,11 +141,14 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>8</integer>
+			<integer>2</integer>
 			<key>color</key>
-			<string>#b0bec5</string>
+			<string>#e6ee9c</string>
 		</dict>
-		<key>item 9</key>
+	</dict>
+	<key>study</key>
+	<dict>
+		<key>item 0</key>
 		<dict>
 			<key>locationID</key>
 			<integer>0</integer>
@@ -150,11 +159,11 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>9</integer>
+			<integer>0</integer>
 			<key>color</key>
-			<string></string>
+			<string>#a5d6a7</string>
 		</dict>
-		<key>item 10</key>
+		<key>item 1</key>
 		<dict>
 			<key>locationID</key>
 			<integer>0</integer>
@@ -165,11 +174,11 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>10</integer>
+			<integer>1</integer>
 			<key>color</key>
-			<string></string>
+			<string>#c5e1a5</string>
 		</dict>
-		<key>item 11</key>
+		<key>item 2</key>
 		<dict>
 			<key>locationID</key>
 			<integer>0</integer>
@@ -180,9 +189,57 @@
 			<key>name</key>
 			<string></string>
 			<key>index</key>
-			<integer>11</integer>
+			<integer>2</integer>
 			<key>color</key>
+			<string>#e6ee9c</string>
+		</dict>
+	</dict>
+	<key>custom</key>
+	<dict>
+		<key>item 0</key>
+		<dict>
+			<key>locationID</key>
+			<integer>0</integer>
+			<key>iconName</key>
 			<string></string>
+			<key>builtin</key>
+			<true/>
+			<key>name</key>
+			<string></string>
+			<key>index</key>
+			<integer>0</integer>
+			<key>color</key>
+			<string>#a5d6a7</string>
+		</dict>
+		<key>item 1</key>
+		<dict>
+			<key>locationID</key>
+			<integer>0</integer>
+			<key>iconName</key>
+			<string></string>
+			<key>builtin</key>
+			<true/>
+			<key>name</key>
+			<string></string>
+			<key>index</key>
+			<integer>1</integer>
+			<key>color</key>
+			<string>#c5e1a5</string>
+		</dict>
+		<key>item 2</key>
+		<dict>
+			<key>locationID</key>
+			<integer>0</integer>
+			<key>iconName</key>
+			<string></string>
+			<key>builtin</key>
+			<true/>
+			<key>name</key>
+			<string></string>
+			<key>index</key>
+			<integer>2</integer>
+			<key>color</key>
+			<string>#e6ee9c</string>
 		</dict>
 	</dict>
 </dict>

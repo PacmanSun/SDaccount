@@ -6,7 +6,7 @@
 //  Copyright © 2019 PacmanSun. All rights reserved.
 //
 
-#import "SDThemeCellTableViewCell.h"
+#import "SDThemeTableViewCell.h"
 #import <BEMCheckBox/BEMCheckBox.h>
 
 #define K_Inset            15
@@ -15,7 +15,7 @@
 #define K_ScreenShotHeight 300
 #define K_ShotCount        2
 
-@interface SDThemeCellTableViewCell ()
+@interface SDThemeTableViewCell ()
 
 @property (nonatomic, strong) UIView *colorView;
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation SDThemeCellTableViewCell
+@implementation SDThemeTableViewCell
 
 //- (void)awakeFromNib {
 //    [super awakeFromNib];
