@@ -3,8 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>list</key>
-	<dict>
-		<key>item 0</key>
+	<array>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -19,7 +18,6 @@
 			<key>color</key>
 			<string>#a5d6a7</string>
 		</dict>
-		<key>item 1</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -34,7 +32,6 @@
 			<key>color</key>
 			<string>#c5e1a5</string>
 		</dict>
-		<key>item 2</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -49,7 +46,6 @@
 			<key>color</key>
 			<string>#e6ee9c</string>
 		</dict>
-		<key>item 3</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -64,7 +60,6 @@
 			<key>color</key>
 			<string>#fff59d</string>
 		</dict>
-		<key>item 4</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -79,7 +74,6 @@
 			<key>color</key>
 			<string>#ffe082</string>
 		</dict>
-		<key>item 5</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -94,7 +88,6 @@
 			<key>color</key>
 			<string>#ffcc80</string>
 		</dict>
-		<key>item 6</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -109,7 +102,6 @@
 			<key>color</key>
 			<string>#ffab91</string>
 		</dict>
-		<key>item 7</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -124,7 +116,6 @@
 			<key>color</key>
 			<string>#bcaaa4</string>
 		</dict>
-		<key>item 8</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -139,7 +130,6 @@
 			<key>color</key>
 			<string>#b0bec5</string>
 		</dict>
-		<key>item 9</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -154,7 +144,6 @@
 			<key>color</key>
 			<string></string>
 		</dict>
-		<key>item 10</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -169,7 +158,6 @@
 			<key>color</key>
 			<string></string>
 		</dict>
-		<key>item 11</key>
 		<dict>
 			<key>categorieID</key>
 			<integer>0</integer>
@@ -184,7 +172,7 @@
 			<key>color</key>
 			<string></string>
 		</dict>
-	</dict>
+	</array>
 	<key>version</key>
 	<string>0.9</string>
 </dict>

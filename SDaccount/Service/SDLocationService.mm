@@ -70,7 +70,7 @@ static NSString *const keyDefaultLocation = @"defaultLocation";
     if (locationName != self.defaultLocation.name || roomID != self.defaultLocation.roomID) {
         NSString *key = [NSString stringWithFormat:@"%ld_%@", roomID, locationName];
         self.defaultLocation = self.maps[SDno2Str(roomID)][locationName];
-        [KeyValueStore setValue:key forKey:keyDefaultLocation];
+        [KeyValueStore setString:key forKey:keyDefaultLocation];
         [[NSNotificationCenter defaultCenter]postNotificationName:SDDefaultLocationChangedNotification object:@(self.defaultLocation.locationID)];
     }
 }
@@ -143,7 +143,7 @@ static NSString *const keyDefaultLocation = @"defaultLocation";
 //        rename default
         if (self.defaultLocation.locationID == location.locationID) {
             NSString *key = [NSString stringWithFormat:@"%ld_%@", roomID, newLocationName];
-            [KeyValueStore setValue:key forKey:keyDefaultLocation];
+            [KeyValueStore setString:key forKey:keyDefaultLocation];
         }
 
         [[NSNotificationCenter defaultCenter]postNotificationName:SDLocationRenamedNotification object:@(location.locationID)];
@@ -275,7 +275,7 @@ static NSString *const keyDefaultLocation = @"defaultLocation";
         DDLogInfo(@"[Location service]: load location data from cache");
     }
 
-    NSString *defaultLocationKey = [KeyValueStore valueForKey:keyDefaultLocation];
+    NSString *defaultLocationKey = [KeyValueStore stringForKey:keyDefaultLocation];
     NSArray *defaultLocationKeys = [defaultLocationKey componentsSeparatedByString:@"_"];
 
     if (defaultLocationKeys.count == 2) {

@@ -69,7 +69,7 @@ static NSString *const keyDefaultRoom = @"defaultRoom";
     if (roomName != self.defaultRoom.name || addressID != self.defaultRoom.addressID) {
         NSString *key = [NSString stringWithFormat:@"%ld_%@", addressID, roomName];
         self.defaultRoom = self.maps[SDno2Str(addressID)][roomName];
-        [KeyValueStore setValue:key forKey:keyDefaultRoom];
+        [KeyValueStore setString:key forKey:keyDefaultRoom];
         [[NSNotificationCenter defaultCenter]postNotificationName:SDDefaultRoomChangedNotification object:@(self.defaultRoom.roomID)];
     }
 }
@@ -136,7 +136,7 @@ static NSString *const keyDefaultRoom = @"defaultRoom";
 //        rename default
         if (self.defaultRoom.roomID == room.roomID) {
             NSString *key = [NSString stringWithFormat:@"%ld_%@", addressID, newRoomName];
-            [KeyValueStore setValue:key forKey:keyDefaultRoom];
+            [KeyValueStore setString:key forKey:keyDefaultRoom];
         }
 
         [[NSNotificationCenter defaultCenter]postNotificationName:SDRoomRenamedNotification object:@(room.roomID)];
@@ -284,7 +284,7 @@ static NSString *const keyDefaultRoom = @"defaultRoom";
         DDLogInfo(@"[Room service]: load room data from cache");
     }
 
-    NSString *defaultRoomKey = [KeyValueStore valueForKey:keyDefaultRoom];
+    NSString *defaultRoomKey = [KeyValueStore stringForKey:keyDefaultRoom];
     NSArray *defaultRoomKeys = [defaultRoomKey componentsSeparatedByString:@"_"];
 
     if (defaultRoomKeys.count == 2) {

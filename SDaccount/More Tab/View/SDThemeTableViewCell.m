@@ -51,7 +51,7 @@
 
 - (void)bindTheme:(id<SDThemeProtocol>)theme {
     self.titleLabel.text = [theme themeName];
-    UIColor *themeColor = UIColorMakeWithHex([theme themeName]);
+    UIColor *themeColor = UIColorMakeWithHex([theme themeColor]);
     self.checkBox.onFillColor = themeColor;
     self.checkBox.onTintColor = themeColor;
     self.colorView.backgroundColor = themeColor;

@@ -122,7 +122,7 @@ static NSString *const kAppSecret = @"eea7f866d202f318d0c4e00331db1c4f";
     SDStaticTableCellData *libCD = [SDStaticTableCellData staticTableViewCellDataWithIdentifier:@"lib" image:UIImageMake(@"more_library") text:@"开源库" detailText:nil accessoryType:SDStaticTableViewCellAccessoryTypeDisclosureIndicator];
     [libCD addSelectedTarget:self action:@selector(onLibCellSelected)];
 
-    SDStaticTableCellData *aboutCD = [SDStaticTableCellData staticTableViewCellDataWithIdentifier:@"about" image:UIImageMake(@"more_about") text:@"about" detailText:nil accessoryType:SDStaticTableViewCellAccessoryTypeDisclosureIndicator];
+    SDStaticTableCellData *aboutCD = [SDStaticTableCellData staticTableViewCellDataWithIdentifier:@"about" image:UIImageMake(@"more_about") text:@"关于" detailText:nil accessoryType:SDStaticTableViewCellAccessoryTypeDisclosureIndicator];
     [aboutCD addSelectedTarget:self action:@selector(onAboutCellSelected)];
 
     SDStaticTableSectionData *sectionOne = [[SDStaticTableSectionData alloc]initWithTitle:nil staticCellDataList:@[themeCD, autoPresentCD]];

@@ -62,7 +62,7 @@ static NSString *const keyDefaultAddress = @"defaultAddress";
     if (addressName != self.defaultAddress.name) {
         NSString *key = [NSString stringWithFormat:@"%@", addressName];
         self.defaultAddress = self.map[key];
-        [KeyValueStore setValue:addressName forKey:keyDefaultAddress];
+        [KeyValueStore setString:addressName forKey:keyDefaultAddress];
         [[NSNotificationCenter defaultCenter]postNotificationName:SDDefaultAddressChangedNotification object:@(self.defaultAddress.addressID)];
     }
 }
@@ -105,7 +105,7 @@ static NSString *const keyDefaultAddress = @"defaultAddress";
         }
 //        rename default
         if (self.defaultAddress.addressID == address.addressID) {
-            [KeyValueStore setValue:newAddressName forKey:keyDefaultAddress];
+            [KeyValueStore setString:newAddressName forKey:keyDefaultAddress];
         }
         [[NSNotificationCenter defaultCenter]postNotificationName:SDAddressRenamedNotification object:@(address.addressID)];
         return YES;
@@ -222,7 +222,7 @@ static NSString *const keyDefaultAddress = @"defaultAddress";
         DDLogInfo(@"[Address service]: load address address from cache");
     }
 
-    NSString *defaultAddressName = [KeyValueStore valueForKey:keyDefaultAddress];
+    NSString *defaultAddressName = [KeyValueStore stringForKey:keyDefaultAddress];
     if (defaultAddressName) {
         self.defaultAddress = self.map[defaultAddressName];
     } else {

@@ -28,8 +28,8 @@
 }
 
 - (void)onAuthorAreaTapped:(id)sender {
-    SDWebViewController *webVC=[[SDWebViewController alloc]init];
-    webVC.requestUrlString=@"https://github.com/PacmanSun";
+    SDWebViewController *webVC = [[SDWebViewController alloc]init];
+    webVC.requestUrlString = @"https://github.com/PacmanSun";
     [self.navigationController pushViewController:webVC animated:YES];
 }
 
