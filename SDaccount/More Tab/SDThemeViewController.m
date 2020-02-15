@@ -53,7 +53,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SDThemeTableViewCell *cell = [[SDThemeTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+//    SDThemeTableViewCell *cell = [[SDThemeTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    SDThemeTableViewCell *cell = [[SDThemeTableViewCell alloc]initForTableView:tableView withStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+
     id<SDThemeProtocol> theme = self.themeList[indexPath.row];
     [cell bindTheme:theme];
 

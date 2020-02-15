@@ -125,7 +125,7 @@
     if (_checkBox == nil) {
         _checkBox = [[BEMCheckBox alloc]init];
         _checkBox.lineWidth = 1;
-        _checkBox.userInteractionEnabled = YES;
+        _checkBox.userInteractionEnabled = NO;
         _checkBox.onCheckColor = UIColorWhite;
     }
     return _checkBox;
