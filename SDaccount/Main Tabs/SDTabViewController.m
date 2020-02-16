@@ -171,6 +171,12 @@ static NSString *tabIconSuffix = @"_sel";
 }
 
 - (void)onThemeChanged:(NSNotification *)notification {
+    [self.itemList enumerateObjectsUsingBlock:^(SDTabBarItem *_Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+        NSString*imgName=[SDTabViewController tabbarSelectedItemNames][idx];
+        obj.selectedImage=SDThemeImageMake(imgName);
+        [obj refreshThemeColor];
+    }];
+    self.addItem.backgroundColor = UIColorMakeWithHex(SD_THEME_COLOR);
 }
 
 #pragma mark -

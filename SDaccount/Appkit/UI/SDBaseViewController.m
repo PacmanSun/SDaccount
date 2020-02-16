@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = UIColorMakeWithHex(SD_BG_GRAY);
+    self.view.backgroundColor = UIColorMakeWithHex(SD_BG_GRAY);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
