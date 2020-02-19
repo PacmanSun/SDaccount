@@ -62,6 +62,7 @@
 		A1BF46C22358E15A00370D21 /* SDAddItemPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF46C12358E15A00370D21 /* SDAddItemPresenter.m */; };
 		A1CCF20A236E748B00E3F6D1 /* SDRoomService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF205236DA6D500E3F6D1 /* SDRoomService.mm */; };
 		A1CCF20D236E906600E3F6D1 /* SDAddressService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF208236DA6EA00E3F6D1 /* SDAddressService.mm */; };
+		A1F0A27D23FD6D8B00EB9BA4 /* SDBillListEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F0A27C23FD6D8B00EB9BA4 /* SDBillListEmptyView.m */; };
 		A1FE75ED2366D48F00533E22 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1FE75EC2366D48F00533E22 /* AliyunEmasServices-Info.plist */; };
 		ACD60D370E0ED04E96FF988E /* Pods_SDaccount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05746542E962966322BCB26 /* Pods_SDaccount.framework */; };
 /* End PBXBuildFile section */
@@ -188,6 +189,8 @@
 		A1CCF205236DA6D500E3F6D1 /* SDRoomService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDRoomService.mm; sourceTree = "<group>"; };
 		A1CCF207236DA6EA00E3F6D1 /* SDAddressService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAddressService.h; sourceTree = "<group>"; };
 		A1CCF208236DA6EA00E3F6D1 /* SDAddressService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SDAddressService.mm; sourceTree = "<group>"; };
+		A1F0A27B23FD6D8B00EB9BA4 /* SDBillListEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDBillListEmptyView.h; sourceTree = "<group>"; };
+		A1F0A27C23FD6D8B00EB9BA4 /* SDBillListEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBillListEmptyView.m; sourceTree = "<group>"; };
 		A1FE75EC2366D48F00533E22 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
 		F05746542E962966322BCB26 /* Pods_SDaccount.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDaccount.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -367,6 +370,8 @@
 		A117BA0B232573F600D285FB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A1F0A27B23FD6D8B00EB9BA4 /* SDBillListEmptyView.h */,
+				A1F0A27C23FD6D8B00EB9BA4 /* SDBillListEmptyView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -770,6 +775,7 @@
 				A17E2FEF236BCFD500F16570 /* SDAddress.mm in Sources */,
 				A117BA75232577F300D285FB /* NSObject+KMNavigationBarTransition.m in Sources */,
 				A16E70492354CCF600E5DB64 /* SDListViewController.m in Sources */,
+				A1F0A27D23FD6D8B00EB9BA4 /* SDBillListEmptyView.m in Sources */,
 				A1377149233EBCCF00263482 /* SDThemeDefault.m in Sources */,
 				A1491481233E07BF003F40F3 /* SDThemeManager.m in Sources */,
 				A117BA71232577F300D285FB /* KMWeakObjectContainer.m in Sources */,
